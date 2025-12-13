@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact EduEarn India - Educational Content Questions</title>
+    <meta name="description" content="Contact us for questions about our educational content, suggestions, or feedback. We're here to help with your learning journey.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <div class="logo">
+                        <span class="logo-icon">EE</span>
+                        <span class="logo-text">EduEarn<span class="logo-highlight">India</span></span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="learn.html" class="btn btn-primary">Start Learning</a>
+                </div>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">Get in touch with questions, feedback, or suggestions about our educational content</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <p>We'll respond to educational inquiries within 24-48 hours.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="content-question">Question about educational content</option>
+                                <option value="suggestion">Content suggestion or idea</option>
+                                <option value="correction">Content correction or update</option>
+                                <option value="partnership">Educational partnership inquiry</option>
+                                <option value="other">Other educational inquiry</option>
+                            </select>
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+                        
+                        <div class="form-disclaimer">
+                            <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> We only respond to educational inquiries. We do not provide personal financial advice, trading tips, or guaranteed earning methods.</p>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    </form>
+                    
+                    <div id="formSuccess" class="success-message" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for your message. We'll respond to your educational inquiry within 24-48 hours.</p>
+                        <button onclick="resetForm()" class="btn btn-secondary">Send Another Message</button>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Other Ways to Connect</h2>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email Us</h3>
+                            <p>For educational content inquiries:</p>
+                            <a href="mailto:education@eduearnindia.com">education@eduearnindia.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Response Time</h3>
+                            <p>We respond to educational inquiries within 24-48 hours on weekdays.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>What We Can Help With</h3>
+                            <ul>
+                                <li>Questions about our educational content</li>
+                                <li>Suggestions for new learning topics</li>
+                                <li>Reporting content errors</li>
+                                <li>Educational partnership inquiries</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-ban"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>What We Cannot Help With</h3>
+                            <ul>
+                                <li>Personal financial advice</li>
+                                <li>Trading tips or stock recommendations</li>
+                                <li>Guarantees about income potential</li>
+                                <li>Technical support for third-party tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview -->
+    <section class="faq-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Common Questions</h2>
+                <p class="section-subtitle">Check these answers before contacting us</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Do you provide personal coaching or mentoring?</h3>
+                    <p>No, we only provide general educational content through our website. We don't offer personal coaching, mentoring, or one-on-one advice.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can you review my trading strategy or portfolio?</h3>
+                    <p>No, we don't review individual trading strategies or portfolios. We provide educational content only, not personal financial advice.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How can I suggest a topic for an article?</h3>
+                    <p>Use the contact form above and select "Content suggestion or idea" as the subject. We consider all educational topic suggestions.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you have a YouTube channel or social media?</h3>
+                    <p>Currently, we focus on written educational content on our website. You can follow our social media links in the footer for updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo">EduEarn<span class="logo-highlight">India</span></span>
+                    </div>
+                    <p class="footer-description">Educational platform teaching legal online earning, trading basics, and digital skills to Indian learners.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="learn.html">Learning Paths</a></li>
+                        <li><a href="tools.html">Free Tools</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="blog.html?category=online-earning">Online Earning</a></li>
+                        <li><a href="blog.html?category=trading-basics">Trading Basics</a></li>
+                        <li><a href="blog.html?category=digital-skills">Digital Skills</a></li>
+                        <li><a href="blog.html?category=tech">Tech & Web</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduEarn India. All rights reserved. | Educational content only.</p>
+                <p class="footer-note"><strong>Disclaimer:</strong> We provide educational content only. No financial advice or profit guarantees. Always do your own research.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

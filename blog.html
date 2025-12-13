@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Blog - Learn Online Earning & Digital Skills</title>
+    <meta name="description" content="Browse our collection of educational articles on online earning, trading basics, digital skills and technology.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <div class="logo">
+                        <span class="logo-icon">EE</span>
+                        <span class="logo-text">EduEarn<span class="logo-highlight">India</span></span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="learn.html" class="btn btn-primary">Start Learning</a>
+                </div>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Educational Blog</h1>
+            <p class="page-subtitle">Learn about legal online earning, trading basics, digital skills and technology</p>
+        </div>
+    </section>
+
+    <!-- Blog Filters -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-category="all">All Articles</button>
+                    <button class="filter-btn" data-category="online-earning">Online Earning</button>
+                    <button class="filter-btn" data-category="trading-basics">Trading Basics</button>
+                    <button class="filter-btn" data-category="digital-skills">Digital Skills</button>
+                    <button class="filter-btn" data-category="tech">Tech & Web</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search articles...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid-section">
+        <div class="container">
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog cards loaded by JavaScript -->
+            </div>
+            
+            <div class="load-more">
+                <button class="btn btn-secondary" id="loadMore">Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2>Get Learning Updates</h2>
+                    <p>Subscribe to receive new educational articles and learning resources</p>
+                </div>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" id="newsletterEmail">
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
+                <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo">EduEarn<span class="logo-highlight">India</span></span>
+                    </div>
+                    <p class="footer-description">Educational platform teaching legal online earning, trading basics, and digital skills to Indian learners.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="learn.html">Learning Paths</a></li>
+                        <li><a href="tools.html">Free Tools</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="blog.html?category=online-earning">Online Earning</a></li>
+                        <li><a href="blog.html?category=trading-basics">Trading Basics</a></li>
+                        <li><a href="blog.html?category=digital-skills">Digital Skills</a></li>
+                        <li><a href="blog.html?category=tech">Tech & Web</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduEarn India. All rights reserved. | Educational content only.</p>
+                <p class="footer-note"><strong>Disclaimer:</strong> We provide educational content only. No financial advice or profit guarantees. Always do your own research.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>
