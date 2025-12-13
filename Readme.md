@@ -5,7 +5,7 @@
 
 EduEarn India is a premium, modern, and fully responsive educational blogging website designed specifically for the Indian audience. The platform provides beginner-friendly educational content on legal online earning methods, trading basics, digital skills, and web technology.
 
-**Live Demo:** [View Demo](#) | **GitHub Repository:** [github.com/username/eduearn-india](#)
+**Live Demo:** [View Demo](https://edu-earn-india.vercel.app/index.html) | **GitHub Repository:** [github.com/username/eduearn-india](https://github.com/mdtanveer0786/EduEarn-India)
 
 ## ✨ Features
 
