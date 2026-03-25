@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Guide to Freelancing in India: Step-by-Step",
+    "category": "online-earning",
+    "excerpt": "Learn how to start your freelance career in India, find international clients, and manage your payments legally.",
+    "date": "March 15, 2026",
+    "readTime": "12 min read",
+    "icon": "fas fa-user-tie",
+    "author": "Arun Kumar"
+  },
+  {
+    "id": 2,
+    "title": "Understanding Stock Market Basics for Beginners",
+    "category": "trading-basics",
+    "excerpt": "An educational overview of how the stock market works, what are shares, and basic terminology you should know.",
+    "date": "March 18, 2026",
+    "readTime": "10 min read",
+    "icon": "fas fa-chart-line",
+    "author": "Priya Sharma"
+  },
+  {
+    "id": 3,
+    "title": "Top 10 High-Demand Digital Skills for 2026",
+    "category": "digital-skills",
+    "excerpt": "Discover the most valuable digital skills you can learn today to build a sustainable online career from home.",
+    "date": "March 20, 2026",
+    "readTime": "8 min read",
+    "icon": "fas fa-laptop-code",
+    "author": "Vikram Singh"
+  },
+  {
+    "id": 4,
+    "title": "Introduction to Technical Analysis in Markets",
+    "category": "trading-basics",
+    "excerpt": "Learn the fundamentals of reading price charts, understanding trends, and identifying support and resistance levels.",
+    "date": "March 22, 2026",
+    "readTime": "15 min read",
+    "icon": "fas fa-chart-area",
+    "author": "Sanjay Mehta"
+  },
+  {
+    "id": 5,
+    "title": "Content Writing vs. Copywriting: Which is for You?",
+    "category": "digital-skills",
+    "excerpt": "Explore the differences between content writing and copywriting and how to choose the right path for your writing career.",
+    "date": "March 24, 2026",
+    "readTime": "7 min read",
+    "icon": "fas fa-pen-fancy",
+    "author": "Anjali Gupta"
+  },
+  {
+    "id": 6,
+    "title": "How to Build a Professional Portfolio from Scratch",
+    "category": "tech",
+    "excerpt": "A guide for beginners to showcase their work and skills through a professional online portfolio or website.",
+    "date": "March 25, 2026",
+    "readTime": "9 min read",
+    "icon": "fas fa-briefcase",
+    "author": "Rahul Verma"
+  },
+  {
+    "id": 7,
+    "title": "Affiliate Marketing Explained for Indian Learners",
+    "category": "online-earning",
+    "excerpt": "Learn the legal way to start affiliate marketing in India, choosing the right programs and building an audience.",
+    "date": "March 26, 2026",
+    "readTime": "11 min read",
+    "icon": "fas fa-bullhorn",
+    "author": "Meera Iyer"
+  },
+  {
+    "id": 8,
+    "title": "Cryptocurrency 101: Understanding the Technology",
+    "category": "tech",
+    "excerpt": "An educational guide on blockchain technology and how cryptocurrencies work, without the hype or tips.",
+    "date": "March 27, 2026",
+    "readTime": "14 min read",
+    "icon": "fas fa-cubes",
+    "author": "Amit Das"
+  }
+]
