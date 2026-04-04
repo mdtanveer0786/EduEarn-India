@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { Sun, Moon, Menu, X } from 'lucide-react';
+import { Sun, Moon, Menu, X, ArrowRight, BookOpen, Zap } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
@@ -12,81 +14,206 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
     }
+    return () => { document.body.style.overflow = 'unset'; };
   }, [isOpen]);
 
   useEffect(() => {
     closeMenu();
-  }, [location]);
+  }, [location.pathname]);
+
+  const navLinks = [
+    { name: 'Home', path: '/', icon: '🏠' },
+    { name: 'Blog', path: '/blog', icon: '📝' },
+    { name: 'Learn', path: '/learn', icon: '📚' },
+    { name: 'Tools', path: '/tools', icon: '🛠️' },
+    { name: 'About', path: '/about', icon: '💡' },
+    { name: 'Contact', path: '/contact', icon: '✉️' },
+  ];
+
+  const menuVariants = {
+    closed: { x: '100%', transition: { type: 'spring', stiffness: 400, damping: 40 } },
+    open: { x: 0, transition: { type: 'spring', stiffness: 400, damping: 40 } }
+  };
+
+  const linkVariants = {
+    closed: { opacity: 0, x: 20 },
+    open: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: { delay: 0.1 + i * 0.05, duration: 0.3 }
+    })
+  };
 
   return (
-    <nav className="navbar">
-      <div className="container">
-        <div className="nav-brand">
-          <Link to="/">
-            <div className="logo">
-              <span className="logo-icon">EE</span>
-              <span className="logo-text">EduEarn<span className="logo-highlight">India</span></span>
-            </div>
-          </Link>
-        </div>
-        
-        <div className={`nav-menu ${isOpen ? 'active' : ''}`} id="navMenu">
-          <ul className="nav-links">
-            <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
-            <li><Link to="/blog" className={location.pathname === '/blog' ? 'active' : ''}>Blog</Link></li>
-            <li><Link to="/learn" className={location.pathname === '/learn' ? 'active' : ''}>Learn</Link></li>
-            <li><Link to="/tools" className={location.pathname === '/tools' ? 'active' : ''}>Tools</Link></li>
-            <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
-            <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
-          </ul>
+    <>
+      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="main-navbar">
+        <div className="container flex justify-between items-center">
+          <div className="nav-brand">
+            <Link to="/" onClick={closeMenu} className="no-underline">
+              <div className="logo">
+                <span className="logo-icon">EE</span>
+                <span className="logo-text">EduEarn<span className="logo-highlight">India</span></span>
+              </div>
+            </Link>
+          </div>
           
-          <div className="nav-actions flex items-center gap-4">
-            {/* Desktop Theme Toggle */}
+          {/* Desktop Navigation */}
+          <div className="nav-menu desktop-nav">
+            <ul className="nav-links">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    to={link.path} 
+                    className={location.pathname === link.path ? 'active' : ''}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            
+            <div className="nav-actions flex items-center gap-4">
+              <button 
+                onClick={toggleTheme} 
+                className="theme-toggle"
+                aria-label="Toggle theme"
+              >
+                {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+              </button>
+              <Link to="/learn" className="btn btn-primary nav-cta-btn">
+                Get Started <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+          
+          {/* Mobile Controls */}
+          <div className="flex items-center gap-3 mobile-controls">
             <button 
               onClick={toggleTheme} 
-              className="theme-toggle hidden lg:flex p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="theme-toggle"
               aria-label="Toggle theme"
             >
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
             </button>
-            <div className="nav-cta hidden lg:block">
-              <Link to="/learn" className="btn btn-primary">Start Learning</Link>
-            </div>
-            
-            {/* Mobile Menu Theme Toggle (Inside Menu) */}
-            <div className="lg:hidden flex flex-col items-center gap-4 w-full pt-4 border-t border-gray-200 dark:border-gray-700">
-              <button 
-                onClick={toggleTheme} 
-                className="flex items-center gap-2 p-3 rounded-xl bg-gray-100 dark:bg-gray-800 w-full justify-center transition-colors"
-              >
-                {theme === 'light' ? <><Moon size={20} /> Dark Mode</> : <><Sun size={20} /> Light Mode</>}
-              </button>
-              <Link to="/learn" className="btn btn-primary btn-block">Start Learning</Link>
-            </div>
+            <button 
+              className="menu-toggle" 
+              onClick={toggleMenu} 
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
           </div>
         </div>
-        
-        <div className="flex items-center gap-2 lg:hidden">
-          <button 
-            onClick={toggleTheme} 
-            className="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            aria-label="Toggle theme"
-          >
-            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
-          <button className="menu-toggle" id="menuToggle" onClick={toggleMenu} aria-label="Toggle navigation menu">
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-      </div>
-      {/* Mobile Overlay */}
-      <div className={`nav-overlay ${isOpen ? 'active' : ''}`} onClick={closeMenu}></div>
-    </nav>
+      </nav>
+
+      {/* Mobile Menu Overlay + Drawer */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="mobile-menu-backdrop"
+              onClick={closeMenu}
+            />
+
+            {/* Drawer */}
+            <motion.div
+              className="mobile-menu-drawer"
+              variants={menuVariants}
+              initial="closed"
+              animate="open"
+              exit="closed"
+            >
+              {/* Drawer Header */}
+              <div className="mobile-menu-header">
+                <Link to="/" onClick={closeMenu} className="no-underline">
+                  <div className="logo">
+                    <span className="logo-icon">EE</span>
+                    <span className="logo-text">EduEarn<span className="logo-highlight">India</span></span>
+                  </div>
+                </Link>
+                <button onClick={closeMenu} className="mobile-close-btn" aria-label="Close menu">
+                  <X size={24} />
+                </button>
+              </div>
+
+              {/* Drawer Badge */}
+              <div className="mobile-menu-badge">
+                <Zap size={14} />
+                <span>Free Educational Platform</span>
+              </div>
+
+              {/* Navigation Links */}
+              <nav className="mobile-nav-links">
+                {navLinks.map((link, i) => (
+                  <motion.div
+                    key={link.name}
+                    custom={i}
+                    variants={linkVariants}
+                    initial="closed"
+                    animate="open"
+                  >
+                    <Link
+                      to={link.path}
+                      className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                      onClick={closeMenu}
+                    >
+                      <span className="mobile-nav-emoji">{link.icon}</span>
+                      <span className="mobile-nav-text">{link.name}</span>
+                      {location.pathname === link.path && (
+                        <span className="mobile-nav-active-dot" />
+                      )}
+                    </Link>
+                  </motion.div>
+                ))}
+              </nav>
+
+              {/* Drawer CTA */}
+              <motion.div
+                className="mobile-menu-cta"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+                <Link to="/learn" className="btn btn-primary btn-block btn-large" onClick={closeMenu}>
+                  <BookOpen size={20} /> Start Learning Free
+                </Link>
+                <p className="mobile-cta-note">
+                  100% free • No credit card required
+                </p>
+              </motion.div>
+
+              {/* Drawer Footer */}
+              <div className="mobile-menu-footer">
+                <div className="mobile-theme-switcher">
+                  <span className="text-sm font-medium">{theme === 'light' ? '☀️ Light' : '🌙 Dark'} Mode</span>
+                  <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
+                    {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

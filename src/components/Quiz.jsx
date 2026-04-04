@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CheckCircle2, XCircle } from 'lucide-react';
 
 const Quiz = ({ quizData }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -6,6 +7,10 @@ const Quiz = ({ quizData }) => {
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
+
+  if (!quizData || quizData.length === 0) {
+    return null;
+  }
 
   const handleAnswerClick = (index) => {
     if (selectedAnswer !== null) return;
@@ -39,18 +44,32 @@ const Quiz = ({ quizData }) => {
   };
 
   if (showScore) {
+    const percentage = Math.round((score / quizData.length) * 100);
     return (
       <div className="quiz-container result text-center">
-        <h3>Quiz Completed!</h3>
-        <p className="score-text">You scored {score} out of {quizData.length}</p>
+        <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
+          {percentage >= 70 ? (
+            <CheckCircle2 size={40} className="text-green-500" />
+          ) : (
+            <XCircle size={40} className="text-red-500" />
+          )}
+        </div>
+        <h3 className="text-2xl font-bold mb-2">Quiz Completed!</h3>
+        <p className="score-text">{score} / {quizData.length} correct ({percentage}%)</p>
         <div className="progress-bar-container">
           <div 
             className="progress-bar" 
-            style={{ width: `${(score / quizData.length) * 100}%` }}
+            style={{ width: `${percentage}%` }}
           ></div>
         </div>
-        <p>{score === quizData.length ? "Excellent! You've mastered this topic." : "Good effort! Keep learning and try again."}</p>
-        <button className="btn btn-primary mt-3" onClick={resetQuiz}>Retake Quiz</button>
+        <p className="text-muted mb-6">
+          {percentage === 100 
+            ? "🎉 Perfect score! You've mastered this topic." 
+            : percentage >= 70 
+              ? "👏 Great job! You have a solid understanding." 
+              : "📚 Keep learning! Review the article and try again."}
+        </p>
+        <button className="btn btn-primary" onClick={resetQuiz}>Retake Quiz</button>
       </div>
     );
   }
@@ -81,9 +100,12 @@ const Quiz = ({ quizData }) => {
             disabled={selectedAnswer !== null}
           >
             <span className="option-label">{String.fromCharCode(65 + index)}</span>
-            {option}
-            {selectedAnswer === index && (
-              <i className={`fas ${index === quizData[currentQuestion].correctAnswer ? 'fa-check-circle' : 'fa-times-circle'} status-icon`}></i>
+            <span style={{ flex: 1 }}>{option}</span>
+            {selectedAnswer !== null && index === quizData[currentQuestion].correctAnswer && (
+              <CheckCircle2 size={20} className="text-green-500" />
+            )}
+            {selectedAnswer === index && index !== quizData[currentQuestion].correctAnswer && (
+              <XCircle size={20} className="text-red-500" />
             )}
           </button>
         ))}
@@ -92,10 +114,11 @@ const Quiz = ({ quizData }) => {
       {selectedAnswer !== null && (
         <div className="explanation-section fade-in">
           <p className={isCorrect ? 'text-success' : 'text-danger'}>
-            <strong>{isCorrect ? 'Correct!' : 'Incorrect.'}</strong> {quizData[currentQuestion].explanation}
+            <strong>{isCorrect ? '✅ Correct!' : '❌ Incorrect.'}</strong>{' '}
+            {quizData[currentQuestion].explanation}
           </p>
-          <button className="btn btn-primary mt-3" onClick={handleNextQuestion}>
-            {currentQuestion + 1 === quizData.length ? 'See Results' : 'Next Question'}
+          <button className="btn btn-primary mt-4" onClick={handleNextQuestion}>
+            {currentQuestion + 1 === quizData.length ? 'See Results' : 'Next Question →'}
           </button>
         </div>
       )}

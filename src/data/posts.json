@@ -1,82 +1,1102 @@
 [
   {
     "id": 1,
-    "title": "Complete Guide to Freelancing in India: Step-by-Step",
+    "title": "Introduction to Freelancing in India: A Comprehensive Guide",
+    "excerpt": "Learn how to start your freelance journey in the Indian market, from choosing a niche to getting your first international client.",
     "category": "online-earning",
-    "excerpt": "Learn how to start your freelance career in India, find international clients, and manage your payments legally.",
-    "date": "March 15, 2026",
-    "readTime": "12 min read",
-    "icon": "fas fa-user-tie",
-    "author": "Arun Kumar"
+    "date": "March 20, 2026",
+    "readTime": "8 min read",
+    "author": "Tanveer Ahmad",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Freelancing has become one of the most viable career options for many in India. With the global shift towards remote work, Indian professionals are now more than ever positioned to offer their skills to clients worldwide. But how do you start? This guide will walk you through the essential steps."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "1. Identify Your Core Skill"
+      },
+      {
+        "type": "paragraph",
+        "text": "Before you jump into freelancing, you need to know what you're selling. Whether it's graphic design, content writing, web development, or digital marketing, focus on one area where you can excel. Niched-down services often command higher rates. For example, instead of offering generic 'writing', position yourself as a 'SaaS blog content writer' or 'Shopify product description specialist'."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2. Choose the Right Platform"
+      },
+      {
+        "type": "paragraph",
+        "text": "Platforms like Upwork, Fiverr, and Freelancer.com are great for beginners. For Indian freelancers, it's also worth looking at LinkedIn as a powerful tool for direct outreach to potential clients. Here's a quick comparison:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Upwork: Best for long-term projects and hourly contracts. Charges 10% service fee.",
+          "Fiverr: Great for packaged services (gigs). You set your price and buyers come to you.",
+          "Freelancer.com: Good for competitive bidding. Best for developers and designers.",
+          "LinkedIn: Free direct outreach. Best for B2B services and building professional relationships."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "3. Setting Your Rates in INR"
+      },
+      {
+        "type": "paragraph",
+        "text": "One of the biggest mistakes Indian freelancers make is underpricing. Research international rates for your skill and use our Freelance Rate Calculator tool to determine a fair price. Factor in GST (if your revenue exceeds ₹20 lakhs), platform fees (up to 20%), and your personal expenses. A content writer in India can realistically charge ₹2-5 per word for quality work."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "4. Building Your Portfolio"
+      },
+      {
+        "type": "paragraph",
+        "text": "No one will hire you without proof of your skills. Create 3-5 sample projects that showcase your best work. Use free tools like Canva for design portfolios, GitHub for code portfolios, or Medium/WordPress for writing samples. A strong portfolio is more valuable than any certification."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "5. Getting Your First Client"
+      },
+      {
+        "type": "paragraph",
+        "text": "Your first client is always the hardest. Start by offering a small project at a competitive (not cheap) rate to build reviews and credibility. Respond to job postings within the first hour for maximum visibility. Personalize every proposal — generic templates get ignored. Once you land your first 5-star review, momentum builds naturally."
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "What is the recommended strategy for a new freelancer's pricing?",
+        "answerOptions": ["Offer services for free to build portfolio", "Undercut all competition with the lowest price", "Research market rates and price competitively", "Charge the highest rate possible immediately"],
+        "correctAnswer": 2,
+        "explanation": "Researching market rates ensures you're competitive without undervaluing your skills. Pricing too low attracts low-quality clients and is unsustainable."
+      },
+      {
+        "questionText": "Which platform is best for long-term hourly freelance contracts?",
+        "answerOptions": ["Fiverr", "Instagram", "Upwork", "WhatsApp"],
+        "correctAnswer": 2,
+        "explanation": "Upwork is specifically designed for long-term hourly and fixed-price contracts with built-in time tracking and payment protection."
+      },
+      {
+        "questionText": "At what annual revenue does GST registration become mandatory in India?",
+        "answerOptions": ["₹5 lakhs", "₹10 lakhs", "₹20 lakhs", "₹50 lakhs"],
+        "correctAnswer": 2,
+        "explanation": "GST registration is mandatory when your aggregate turnover exceeds ₹20 lakhs (₹10 lakhs for special category states) in a financial year."
+      }
+    ]
   },
   {
     "id": 2,
-    "title": "Understanding Stock Market Basics for Beginners",
+    "title": "Understanding Stock Market Fundamentals: For Beginners",
+    "excerpt": "An educational guide to understanding how the Indian stock market works. Learn about Nifty, Sensex, and the basics of investing.",
     "category": "trading-basics",
-    "excerpt": "An educational overview of how the stock market works, what are shares, and basic terminology you should know.",
     "date": "March 18, 2026",
-    "readTime": "10 min read",
-    "icon": "fas fa-chart-line",
-    "author": "Priya Sharma"
+    "readTime": "12 min read",
+    "author": "Finance Team",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "The stock market can seem intimidating, but at its core, it's quite simple. This article is strictly for educational purposes and is not financial advice. Understanding the market is a crucial life skill, even if you never plan to trade."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "What is a Stock?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A stock represents a fraction of ownership in a company. When you buy a stock, you're buying a small piece of that business. In India, most of these transactions happen on the National Stock Exchange (NSE) and the Bombay Stock Exchange (BSE). For example, if you buy 10 shares of Infosys, you own a tiny fraction of Infosys Limited."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Understanding Nifty 50 & Sensex"
+      },
+      {
+        "type": "paragraph",
+        "text": "The Nifty 50 is an index of the top 50 companies listed on the NSE, while the Sensex tracks 30 of the largest companies on the BSE. These indices serve as a barometer for the overall health of the Indian economy. When people say 'the market is up', they usually mean the Nifty or Sensex has risen."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "How Does Trading Work?"
+      },
+      {
+        "type": "paragraph",
+        "text": "To buy or sell stocks, you need three accounts: a Bank Account (for funds), a Demat Account (to hold shares electronically), and a Trading Account (to place buy/sell orders). Popular brokers in India include Zerodha, Groww, and Upstox. The market operates from 9:15 AM to 3:30 PM IST on weekdays."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Key Terminology Every Beginner Should Know"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Bull Market: A period when stock prices are rising consistently.",
+          "Bear Market: A period when stock prices are falling consistently.",
+          "IPO (Initial Public Offering): When a company sells shares to the public for the first time.",
+          "Dividend: A portion of a company's profit distributed to shareholders.",
+          "Market Cap: Total market value of a company's outstanding shares.",
+          "P/E Ratio: Price-to-Earnings ratio, used to evaluate if a stock is overvalued or undervalued."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Golden Rule: Never Invest What You Can't Afford to Lose"
+      },
+      {
+        "type": "paragraph",
+        "text": "Markets are inherently risky. Prices can go down just as easily as they go up. Never invest money that you need for essential expenses like rent, food, or education. Start with paper trading (virtual trading) to practice without risking real money. Remember: past performance is never a guarantee of future results."
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "What does the Nifty 50 index represent?",
+        "answerOptions": ["Top 50 startups in India", "Top 50 companies on the NSE", "50 cheapest stocks available", "50 most volatile stocks"],
+        "correctAnswer": 1,
+        "explanation": "The Nifty 50 is an index of the 50 largest and most liquid companies listed on the National Stock Exchange (NSE) of India."
+      },
+      {
+        "questionText": "Which accounts do you need to start trading in India?",
+        "answerOptions": ["Only a bank account", "Bank, Demat, and Trading accounts", "A PayPal account", "Only a Demat account"],
+        "correctAnswer": 1,
+        "explanation": "To trade stocks in India, you need all three: a Bank Account for funds, a Demat Account to hold shares, and a Trading Account to place orders."
+      },
+      {
+        "questionText": "What does a 'Bear Market' indicate?",
+        "answerOptions": ["Prices are rising steadily", "Prices are falling consistently", "Market is closed", "Only large-cap stocks are performing"],
+        "correctAnswer": 1,
+        "explanation": "A Bear Market is characterized by a sustained decline in stock prices, typically a drop of 20% or more from recent highs."
+      }
+    ]
   },
   {
     "id": 3,
-    "title": "Top 10 High-Demand Digital Skills for 2026",
+    "title": "Top 10 High-Demand Digital Skills to Learn in 2026",
+    "excerpt": "Stay ahead of the curve by learning these 10 digital skills that are currently shaping the global job market.",
     "category": "digital-skills",
-    "excerpt": "Discover the most valuable digital skills you can learn today to build a sustainable online career from home.",
-    "date": "March 20, 2026",
-    "readTime": "8 min read",
-    "icon": "fas fa-laptop-code",
-    "author": "Vikram Singh"
+    "date": "March 15, 2026",
+    "readTime": "10 min read",
+    "author": "Skill Center",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "The digital landscape is evolving rapidly. To remain competitive, continuous learning is essential. Here are the top 10 skills you should consider mastering this year, especially if you're an Indian professional or student looking to boost your career prospects."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "1. Artificial Intelligence & Prompt Engineering"
+      },
+      {
+        "type": "paragraph",
+        "text": "AI is no longer the future — it's the present. Understanding how to use AI tools effectively (like ChatGPT, Gemini, Claude) and write effective prompts is a skill every professional needs. Companies are actively hiring 'AI Prompt Engineers' with salaries ranging from ₹8-25 LPA in India."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2. Full-Stack Web Development"
+      },
+      {
+        "type": "paragraph",
+        "text": "The MERN stack (MongoDB, Express, React, Node.js) continues to dominate the Indian tech industry. A skilled full-stack developer can earn ₹6-20 LPA. Free resources like freeCodeCamp, The Odin Project, and YouTube channels like CodeWithHarry make learning accessible."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "3. Digital Marketing & SEO"
+      },
+      {
+        "type": "paragraph",
+        "text": "Every business needs an online presence. Skills in Google Ads, Facebook Ads, SEO, and content marketing are in massive demand. Indian freelancers specializing in digital marketing can earn ₹30,000-₹2,00,000+ per month depending on experience."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "4. Data Analytics & Visualization"
+      },
+      {
+        "type": "paragraph",
+        "text": "Tools like Excel (advanced), Power BI, Tableau, and Python for data analysis are highly valued. Businesses need people who can turn raw data into actionable insights. Entry-level data analysts in India earn ₹4-8 LPA."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "5-10: More Essential Skills"
+      },
+      {
+        "type": "list",
+        "items": [
+          "5. Cloud Computing (AWS, Azure, GCP) — ₹8-30 LPA salary range",
+          "6. Cybersecurity — Critical for every organization, ₹6-25 LPA",
+          "7. UI/UX Design — Tools like Figma are industry standards, ₹5-18 LPA",
+          "8. Video Editing & Motion Graphics — Essential for YouTube and social media",
+          "9. Blockchain Development — Emerging field with high earning potential",
+          "10. Mobile App Development (Flutter/React Native) — Cross-platform is the future"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "How to Start Learning"
+      },
+      {
+        "type": "paragraph",
+        "text": "Pick ONE skill from this list and dedicate 2-3 hours daily for 3 months. Use free resources first before investing in paid courses. Build projects as you learn — theory alone won't get you hired. Check our Learning Paths section for structured roadmaps on these topics."
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "What does the MERN stack stand for?",
+        "answerOptions": ["MySQL, Express, React, Node.js", "MongoDB, Express, React, Node.js", "MongoDB, Ember, Ruby, Next.js", "MySQL, Electron, React, Nginx"],
+        "correctAnswer": 1,
+        "explanation": "MERN stands for MongoDB (database), Express.js (backend framework), React (frontend library), and Node.js (runtime environment)."
+      },
+      {
+        "questionText": "What is the best approach to learning a new digital skill?",
+        "answerOptions": ["Buy the most expensive course available", "Focus on one skill and practice daily", "Learn all 10 skills simultaneously", "Only read theory without building projects"],
+        "correctAnswer": 1,
+        "explanation": "Focused daily practice on ONE skill, combined with building real projects, is the most effective learning strategy. Spreading too thin leads to shallow knowledge."
+      },
+      {
+        "questionText": "Which tool is considered the industry standard for UI/UX Design?",
+        "answerOptions": ["Microsoft Paint", "Figma", "PowerPoint", "Adobe Flash"],
+        "correctAnswer": 1,
+        "explanation": "Figma is the industry-standard collaborative design tool used by companies worldwide for UI/UX design, prototyping, and design systems."
+      }
+    ]
   },
   {
     "id": 4,
-    "title": "Introduction to Technical Analysis in Markets",
-    "category": "trading-basics",
-    "excerpt": "Learn the fundamentals of reading price charts, understanding trends, and identifying support and resistance levels.",
-    "date": "March 22, 2026",
+    "title": "SEO Basics: How to Rank Your Website on Google India",
+    "excerpt": "A beginner's guide to Search Engine Optimization. Learn how to optimize your content for both users and search engines.",
+    "category": "tech",
+    "date": "March 12, 2026",
     "readTime": "15 min read",
-    "icon": "fas fa-chart-area",
-    "author": "Sanjay Mehta"
+    "author": "Web Team",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Search Engine Optimization (SEO) is the art and science of getting your web pages to rank higher in search engine results. In India, Google dominates with over 98% market share, making Google SEO the only game in town. This guide covers the fundamentals every website owner needs to know."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "What is SEO and Why Does It Matter?"
+      },
+      {
+        "type": "paragraph",
+        "text": "SEO is the process of optimizing your website so that search engines like Google can understand your content and show it to people searching for relevant information. Organic (free) traffic from search engines is the most valuable source of visitors for any website. Unlike paid ads, SEO traffic compounds over time."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "On-Page SEO Essentials"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Title Tags: Keep under 60 characters. Include your primary keyword naturally.",
+          "Meta Descriptions: Write compelling 155-character descriptions that encourage clicks.",
+          "Header Tags (H1-H6): Use a single H1 per page. Structure content logically with H2 and H3 subheadings.",
+          "Image Alt Text: Describe every image for accessibility and SEO benefit.",
+          "Internal Linking: Link to your own related content to help Google discover more pages.",
+          "URL Structure: Use short, descriptive URLs with keywords (e.g., /blog/freelancing-guide)."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Off-Page SEO: Building Authority"
+      },
+      {
+        "type": "paragraph",
+        "text": "Off-page SEO is about building your website's authority through backlinks (links from other websites to yours). Quality matters far more than quantity. One backlink from a reputable site like Times of India or HubSpot is worth more than 100 links from random blogs. Guest posting, creating shareable content, and building genuine relationships are the best ways to earn backlinks ethically."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Technical SEO Checklist"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ensure your site loads in under 3 seconds (use Google PageSpeed Insights).",
+          "Make your site mobile-friendly (Google uses mobile-first indexing).",
+          "Submit a sitemap.xml to Google Search Console.",
+          "Fix broken links and 404 errors regularly.",
+          "Use HTTPS (SSL certificate) — Google penalizes non-secure sites.",
+          "Implement structured data (Schema.org) for rich snippets."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Free SEO Tools for Indian Bloggers"
+      },
+      {
+        "type": "paragraph",
+        "text": "You don't need expensive tools to do SEO well. Google Search Console (free and essential), Google Analytics, Ubersuggest (limited free plan), Answer The Public, and Google's Keyword Planner are more than enough for beginners. Focus on creating genuinely helpful content that answers real questions."
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "What is the recommended maximum length for a title tag?",
+        "answerOptions": ["30 characters", "60 characters", "100 characters", "200 characters"],
+        "correctAnswer": 1,
+        "explanation": "Title tags should be kept under 60 characters to ensure they display fully in Google search results without being truncated."
+      },
+      {
+        "questionText": "What does 'mobile-first indexing' mean?",
+        "answerOptions": ["Only mobile users can find your site", "Google primarily uses the mobile version of your site for ranking", "You must have a mobile app", "Desktop sites are no longer indexed"],
+        "correctAnswer": 1,
+        "explanation": "Mobile-first indexing means Google predominantly uses the mobile version of a website's content for indexing and ranking, making mobile optimization critical."
+      },
+      {
+        "questionText": "Which of the following is an essential free SEO tool?",
+        "answerOptions": ["Adobe Photoshop", "Google Search Console", "Microsoft Excel", "Zoom"],
+        "correctAnswer": 1,
+        "explanation": "Google Search Console is a free, essential tool for monitoring your site's presence in Google search results, submitting sitemaps, and identifying indexing issues."
+      }
+    ]
   },
   {
     "id": 5,
-    "title": "Content Writing vs. Copywriting: Which is for You?",
-    "category": "digital-skills",
-    "excerpt": "Explore the differences between content writing and copywriting and how to choose the right path for your writing career.",
-    "date": "March 24, 2026",
-    "readTime": "7 min read",
-    "icon": "fas fa-pen-fancy",
-    "author": "Anjali Gupta"
+    "title": "Affiliate Marketing for Indians: An Ethical Approach",
+    "excerpt": "Discover how to build a sustainable income through affiliate marketing without compromising your integrity or misleading your audience.",
+    "category": "online-earning",
+    "date": "March 10, 2026",
+    "readTime": "9 min read",
+    "author": "Marketing Expert",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Affiliate marketing is one of the most popular ways to earn money online in India. The concept is simple: you recommend a product or service, and if someone buys through your unique link, you earn a commission. But doing it ethically is what separates sustainable earners from scammy influencers."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "How Affiliate Marketing Works"
+      },
+      {
+        "type": "paragraph",
+        "text": "You sign up for an affiliate program (like Amazon Associates, Flipkart Affiliate, or Hostinger Partners), get a unique tracking link, and share it through your blog, YouTube channel, or social media. When someone clicks your link and makes a purchase within the tracking window (usually 24 hours to 30 days), you earn a percentage of the sale."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Top Affiliate Programs for Indians"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Amazon Associates: 1-10% commission across all product categories. Best for beginners.",
+          "Flipkart Affiliate: Similar to Amazon, great for Indian-specific product recommendations.",
+          "Hostinger/Bluehost: Web hosting affiliates pay ₹3,000-₹7,000 per sale. Very lucrative for tech bloggers.",
+          "Zerodha/Groww Referral: Earn per referral when someone opens a Demat account through your link.",
+          "Coursera/Udemy Affiliates: Perfect if your audience is interested in learning and upskilling."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Ethical Framework"
+      },
+      {
+        "type": "paragraph",
+        "text": "Always disclose your affiliate relationships. This is not just ethical — it's required by ASCI (Advertising Standards Council of India) guidelines. Only recommend products you have personally used or thoroughly researched. Never create fake urgency or misleading reviews just to earn a commission. Your audience's trust is worth more than any commission check."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Content Strategies That Work"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Product comparison articles (e.g., 'Zerodha vs Groww: Which is Better?')",
+          "Honest reviews with both pros and cons",
+          "Tutorial content that naturally uses affiliate products",
+          "'Best of' lists with genuine recommendations",
+          "YouTube unboxing and review videos with affiliate links in the description"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Realistic Income Expectations"
+      },
+      {
+        "type": "paragraph",
+        "text": "Month 1-3: ₹0-₹2,000. Month 3-6: ₹2,000-₹10,000. Month 6-12: ₹10,000-₹50,000+. These are realistic ranges for someone consistently creating quality content. Anyone promising lakhs in the first month is likely being dishonest. Affiliate marketing is a marathon, not a sprint."
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "What is a key ethical requirement in affiliate marketing in India?",
+        "answerOptions": ["Hide affiliate links from your audience", "Disclose affiliate relationships transparently", "Only promote the highest-paying products", "Create fake reviews for better conversions"],
+        "correctAnswer": 1,
+        "explanation": "ASCI guidelines and ethical best practices require that you clearly disclose affiliate relationships to your audience. Transparency builds trust and is legally required."
+      },
+      {
+        "questionText": "What is a realistic affiliate income for months 1-3 as a beginner?",
+        "answerOptions": ["₹1,00,000+", "₹0-₹2,000", "₹50,000-₹1,00,000", "₹10,000-₹20,000"],
+        "correctAnswer": 1,
+        "explanation": "Most beginners earn ₹0-₹2,000 in their first 1-3 months. Affiliate marketing requires consistent effort and traffic building before generating significant income."
+      },
+      {
+        "questionText": "Which content format works best for affiliate marketing?",
+        "answerOptions": ["Random product links with no context", "Honest comparison articles and genuine reviews", "Spamming links in WhatsApp groups", "Fake testimonials and fabricated results"],
+        "correctAnswer": 1,
+        "explanation": "Comparison articles and genuine reviews provide value to readers while naturally incorporating affiliate products, leading to higher trust and conversion rates."
+      }
+    ]
   },
   {
     "id": 6,
-    "title": "How to Build a Professional Portfolio from Scratch",
-    "category": "tech",
-    "excerpt": "A guide for beginners to showcase their work and skills through a professional online portfolio or website.",
-    "date": "March 25, 2026",
-    "readTime": "9 min read",
-    "icon": "fas fa-briefcase",
-    "author": "Rahul Verma"
+    "title": "Risk Management in Trading: The Golden Rules",
+    "excerpt": "Education on why managing risk is more important than finding the 'perfect' trade. Essential reading for anyone interested in markets.",
+    "category": "trading-basics",
+    "date": "March 08, 2026",
+    "readTime": "14 min read",
+    "author": "Education Desk",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Most beginners focus on finding the 'perfect trade' or the 'best indicator'. But professional traders and investors know that risk management is what truly separates winners from losers in the long run. This educational article covers the fundamental principles of protecting your capital."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The 1% Rule: Your First Line of Defense"
+      },
+      {
+        "type": "paragraph",
+        "text": "Never risk more than 1-2% of your total trading capital on a single trade. If you have ₹1,00,000 in your trading account, your maximum loss on any single trade should not exceed ₹1,000-₹2,000. This simple rule ensures that even a string of losing trades won't wipe out your account."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Stop-Loss: The Non-Negotiable Tool"
+      },
+      {
+        "type": "paragraph",
+        "text": "A stop-loss is a predetermined price level at which you exit a trade to limit your loss. Every single trade should have a stop-loss before you enter. Trading without a stop-loss is like driving without a seatbelt — you might be fine most of the time, but when things go wrong, the consequences are devastating."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Risk-Reward Ratio Explained"
+      },
+      {
+        "type": "paragraph",
+        "text": "The risk-reward ratio compares the potential risk of a trade to its potential reward. A minimum of 1:2 ratio is recommended — meaning if you're risking ₹100, your potential reward should be at least ₹200. With this ratio, you can be wrong 50% of the time and still be profitable. Use our Risk-Reward Ratio Tool in the Tools section to calculate this."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Common Risk Management Mistakes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Averaging down on a losing position (adding more money to a losing trade)",
+          "Moving your stop-loss further away hoping the market will reverse",
+          "Risking too much on a single 'sure thing' trade",
+          "Trading with borrowed money or funds you can't afford to lose",
+          "Revenge trading after a loss (trying to immediately recover by taking bigger risks)",
+          "Not accounting for brokerage fees and taxes (STT, GST, stamp duty)"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Position Sizing: How Much to Trade"
+      },
+      {
+        "type": "paragraph",
+        "text": "Position sizing determines how many shares or lots you should trade based on your risk tolerance and stop-loss distance. Formula: Position Size = (Account Risk Amount) ÷ (Entry Price - Stop Loss Price). For example, if you have ₹1,00,000, risk 1% (₹1,000), and your stop-loss is ₹10 away from entry, you should buy 100 shares maximum."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Final Thought: Preservation Over Profits"
+      },
+      {
+        "type": "paragraph",
+        "text": "The primary goal of risk management is capital preservation. You can't make money if you've lost your capital. As the legendary trader Paul Tudor Jones said: 'The most important rule of trading is to play great defense, not great offense.' Remember, this is educational content — always consult a SEBI-registered advisor before making investment decisions."
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "What is the recommended maximum risk per trade according to the 1% rule?",
+        "answerOptions": ["10% of your account", "1-2% of your account", "50% of your account", "25% of your account"],
+        "correctAnswer": 1,
+        "explanation": "The 1% rule states you should never risk more than 1-2% of your total trading capital on any single trade to prevent significant account drawdowns."
+      },
+      {
+        "questionText": "What is the minimum recommended risk-reward ratio?",
+        "answerOptions": ["1:0.5", "1:1", "1:2", "1:0.1"],
+        "correctAnswer": 2,
+        "explanation": "A minimum 1:2 risk-reward ratio means your potential reward should be at least twice your potential risk, allowing profitability even with a 50% win rate."
+      },
+      {
+        "questionText": "What is 'revenge trading'?",
+        "answerOptions": ["A valid trading strategy", "Taking bigger risks after a loss to recover quickly", "Trading with a plan", "Buying stocks at discount"],
+        "correctAnswer": 1,
+        "explanation": "Revenge trading is an emotional response to losses where traders take bigger, impulsive risks trying to recover, which usually leads to even bigger losses."
+      }
+    ]
   },
   {
     "id": 7,
-    "title": "Affiliate Marketing Explained for Indian Learners",
+    "title": "How to Start a YouTube Channel in India: Complete Guide",
+    "excerpt": "A step-by-step blueprint for launching, growing, and monetizing a YouTube channel in the Indian market.",
     "category": "online-earning",
-    "excerpt": "Learn the legal way to start affiliate marketing in India, choosing the right programs and building an audience.",
-    "date": "March 26, 2026",
+    "date": "March 05, 2026",
     "readTime": "11 min read",
-    "icon": "fas fa-bullhorn",
-    "author": "Meera Iyer"
+    "author": "Content Team",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "India is YouTube's largest market with over 467 million users. This presents a massive opportunity for content creators. Whether you want to teach, entertain, or share your expertise — YouTube offers a legitimate path to building an audience and earning income. Here's your complete roadmap."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Step 1: Choose Your Niche Wisely"
+      },
+      {
+        "type": "paragraph",
+        "text": "The biggest mistake new YouTubers make is trying to cover everything. Pick a specific niche that you're both passionate about and that has audience demand. High-demand niches in India include: Tech Reviews, Personal Finance Education, Cooking, Study/Exam Tips, Gaming, and Fitness. Use YouTube search suggestions to validate demand."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Step 2: Equipment You Actually Need"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Camera: Your smartphone is enough to start. Modern phones shoot excellent 1080p/4K video.",
+          "Audio: Invest ₹500-₹2,000 in a clip-on/lapel microphone. Bad audio kills videos faster than bad video.",
+          "Lighting: Natural daylight is best. A ₹500 ring light works well for indoor shoots.",
+          "Editing: DaVinci Resolve (free) or CapCut (free) are professional-grade editing tools.",
+          "Tripod: A ₹300-₹500 mobile tripod is essential for stable footage."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Step 3: YouTube Monetization Requirements"
+      },
+      {
+        "type": "paragraph",
+        "text": "To join the YouTube Partner Program (YPP) and start earning ad revenue, you need: 1,000 subscribers AND 4,000 watch hours in the last 12 months (or 10 million Shorts views in 90 days). This typically takes 6-18 months of consistent uploading. Don't focus on monetization early — focus on creating valuable content."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Step 4: Revenue Streams Beyond Ads"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Brand Sponsorships: Companies pay ₹5,000-₹5,00,000+ per video depending on your audience size.",
+          "Affiliate Marketing: Recommend products with affiliate links in your video description.",
+          "Channel Memberships: Offer exclusive content to paying members.",
+          "Digital Products: Sell courses, e-books, or templates related to your niche.",
+          "Super Thanks/Super Chat: Viewers can tip you during live streams."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Realistic Income Expectations"
+      },
+      {
+        "type": "paragraph",
+        "text": "Indian YouTube CPM (cost per mille) ranges from ₹30-₹150 for most niches. Finance and tech niches pay higher (₹100-₹500 CPM). A channel with 50,000 views per month might earn ₹3,000-₹15,000 from ads alone. The real money comes from sponsorships and affiliate deals once you hit 10,000+ subscribers."
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "What are the minimum requirements for YouTube monetization?",
+        "answerOptions": ["100 subscribers and 100 watch hours", "1,000 subscribers and 4,000 watch hours", "10,000 subscribers and 10,000 watch hours", "No requirements — anyone can monetize"],
+        "correctAnswer": 1,
+        "explanation": "The YouTube Partner Program requires 1,000 subscribers AND 4,000 watch hours in the last 12 months (or 10 million Shorts views in 90 days)."
+      },
+      {
+        "questionText": "What equipment should you invest in FIRST as a new YouTuber?",
+        "answerOptions": ["A ₹1,00,000 camera", "A good microphone (₹500-₹2,000)", "Professional studio lighting", "An expensive editing laptop"],
+        "correctAnswer": 1,
+        "explanation": "Audio quality is the most critical factor. Viewers tolerate average video quality but will immediately leave if audio is poor. A ₹500-₹2,000 microphone is the best first investment."
+      },
+      {
+        "questionText": "What is the typical CPM range for Indian YouTube channels in most niches?",
+        "answerOptions": ["₹1-₹5", "₹30-₹150", "₹1,000-₹5,000", "₹500-₹1,000"],
+        "correctAnswer": 1,
+        "explanation": "Indian YouTube CPM (revenue per 1,000 views) typically ranges from ₹30-₹150 for most niches, with finance and tech niches on the higher end."
+      }
+    ]
   },
   {
     "id": 8,
-    "title": "Cryptocurrency 101: Understanding the Technology",
+    "title": "Understanding Mutual Funds for Beginners in India",
+    "excerpt": "A simplified educational guide to understanding how mutual funds work, their types, and why SIPs have become popular in India.",
+    "category": "trading-basics",
+    "date": "March 03, 2026",
+    "readTime": "13 min read",
+    "author": "Finance Team",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Mutual funds have become one of the most popular investment vehicles in India, especially among young professionals. But what exactly are they? This educational guide explains the fundamentals in simple terms. Remember: this is for learning only, not financial advice."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "What is a Mutual Fund?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A mutual fund pools money from many investors and invests it in stocks, bonds, or other securities. A professional fund manager makes the investment decisions on behalf of all investors. Think of it like a potluck dinner — everyone contributes, and a chef (fund manager) decides the best recipes (investments) to create."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Types of Mutual Funds"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Equity Funds: Invest primarily in stocks. Higher risk, higher potential returns. Best for long-term goals (5+ years).",
+          "Debt Funds: Invest in bonds and fixed-income securities. Lower risk, moderate returns. Good for 1-3 year goals.",
+          "Hybrid Funds: Mix of equity and debt. Balanced risk-reward. Suitable for moderate risk appetite.",
+          "Index Funds: Track a specific index (e.g., Nifty 50). Low cost, passive management. Great for beginners.",
+          "ELSS (Tax-Saving Funds): Equity funds offering tax deduction under Section 80C. 3-year lock-in period."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "SIP: The Power of Systematic Investment"
+      },
+      {
+        "type": "paragraph",
+        "text": "A Systematic Investment Plan (SIP) lets you invest a fixed amount regularly (usually monthly) in a mutual fund. You can start with as little as ₹500/month. The magic of SIP is 'rupee cost averaging' — when the market is down, your fixed amount buys more units, and when it's up, it buys fewer. Over time, this averages out your purchase cost and reduces risk."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Understanding Expense Ratio and NAV"
+      },
+      {
+        "type": "paragraph",
+        "text": "The expense ratio is the annual fee charged by the fund house (typically 0.1% to 2.5%). Lower is better — index funds usually have the lowest expense ratios (0.1-0.5%). NAV (Net Asset Value) is the per-unit price of the mutual fund. A high NAV doesn't mean the fund is expensive — it just means the fund has grown over time."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Key Risks to Understand"
+      },
+      {
+        "type": "paragraph",
+        "text": "Mutual funds are subject to market risks. Past performance does not guarantee future returns. Equity funds can lose 20-40% in a bear market. Never invest money you need in the short term. Always read the scheme information document (SID) before investing. The SEBI-mandated disclaimer 'Mutual Fund investments are subject to market risks' is not just a formality — it's a genuine warning."
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "What is an SIP in mutual funds?",
+        "answerOptions": ["A one-time large investment", "A Systematic Investment Plan with regular fixed contributions", "A type of stock trading", "A government bond"],
+        "correctAnswer": 1,
+        "explanation": "SIP (Systematic Investment Plan) allows you to invest a fixed amount at regular intervals, benefiting from rupee cost averaging and the power of compounding."
+      },
+      {
+        "questionText": "Which type of mutual fund offers tax benefits under Section 80C?",
+        "answerOptions": ["Index Fund", "Debt Fund", "ELSS (Equity Linked Savings Scheme)", "Liquid Fund"],
+        "correctAnswer": 2,
+        "explanation": "ELSS funds offer tax deduction up to ₹1.5 lakhs under Section 80C of the Income Tax Act. They come with a mandatory 3-year lock-in period."
+      },
+      {
+        "questionText": "What does a lower expense ratio mean for investors?",
+        "answerOptions": ["Higher risk", "More of your returns go to you, less to the fund house", "Poorer fund management", "Higher exit loads"],
+        "correctAnswer": 1,
+        "explanation": "A lower expense ratio means the fund charges less in fees, so more of your investment returns stay with you. Index funds typically offer the lowest expense ratios."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Mastering React.js: A Complete Beginner's Guide",
+    "excerpt": "Learn why React.js is the most popular frontend library and how to start building modern web applications from scratch.",
+    "category": "digital-skills",
+    "date": "February 28, 2026",
+    "readTime": "16 min read",
+    "author": "Dev Team",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "React.js, created by Facebook (Meta), is the most popular JavaScript library for building user interfaces. Companies like Netflix, Instagram, Airbnb, and Flipkart use React. If you're an aspiring web developer in India, React is arguably the most marketable skill you can learn right now."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Why Learn React?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Massive job market: Over 60% of frontend job listings in India mention React.",
+          "Component-based architecture makes code reusable and maintainable.",
+          "Virtual DOM ensures fast rendering and optimal performance.",
+          "Huge ecosystem: React Router, Redux, Next.js, React Native for mobile apps.",
+          "Active community: Thousands of tutorials, libraries, and Stack Overflow answers."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Prerequisites Before Learning React"
+      },
+      {
+        "type": "paragraph",
+        "text": "Before diving into React, you must be comfortable with: HTML5 & CSS3, JavaScript ES6+ (arrow functions, destructuring, map/filter, promises, async/await), and basic understanding of how the DOM works. If you're weak in JavaScript, spend 2-4 weeks solidifying your fundamentals first."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Core React Concepts"
+      },
+      {
+        "type": "list",
+        "items": [
+          "JSX: A syntax extension that lets you write HTML-like code in JavaScript.",
+          "Components: Reusable building blocks. Think of them as custom HTML elements.",
+          "Props: Data passed from parent to child components (read-only).",
+          "State: Data that changes over time within a component (using useState).",
+          "useEffect: Side effects like API calls, timers, and subscriptions.",
+          "Event Handling: onClick, onChange, onSubmit — similar to vanilla JS but with camelCase."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Building Your First React App"
+      },
+      {
+        "type": "paragraph",
+        "text": "The fastest way to start is with Vite: run 'npm create vite@latest my-app -- --template react' in your terminal. This gives you a blazing-fast development server and optimized production builds. Your first project should be a simple todo app or portfolio site — something small enough to complete but complex enough to learn state management and event handling."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Career Path & Salary Expectations in India"
+      },
+      {
+        "type": "paragraph",
+        "text": "React Developer salaries in India: Fresher (0-1 year): ₹3-6 LPA, Junior (1-3 years): ₹6-12 LPA, Mid-level (3-5 years): ₹12-20 LPA, Senior (5+ years): ₹20-40+ LPA. Remote positions with international companies can pay ₹30-80+ LPA. Build 3-5 portfolio projects and contribute to open-source to stand out."
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "What is JSX in React?",
+        "answerOptions": ["A new programming language", "A syntax extension that lets you write HTML-like code in JavaScript", "A database query language", "A CSS framework"],
+        "correctAnswer": 1,
+        "explanation": "JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write markup directly in your JavaScript code. It gets compiled to regular JavaScript."
+      },
+      {
+        "questionText": "Which React hook is used for managing state in functional components?",
+        "answerOptions": ["useEffect", "useContext", "useState", "useRef"],
+        "correctAnswer": 2,
+        "explanation": "useState is the React hook for adding state to functional components. It returns a state variable and a function to update it."
+      },
+      {
+        "questionText": "What is the prerequisite before learning React?",
+        "answerOptions": ["PHP and MySQL", "JavaScript ES6+ fundamentals", "Java and Spring Boot", "C++ programming"],
+        "correctAnswer": 1,
+        "explanation": "A solid understanding of JavaScript ES6+ (arrow functions, destructuring, promises, async/await) is essential before learning React."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Building a Personal Brand Online: The Indian Creator's Guide",
+    "excerpt": "Learn how to establish a strong personal brand in the digital space. Stand out in a crowded market with authentic positioning.",
     "category": "tech",
-    "excerpt": "An educational guide on blockchain technology and how cryptocurrencies work, without the hype or tips.",
-    "date": "March 27, 2026",
-    "readTime": "14 min read",
-    "icon": "fas fa-cubes",
-    "author": "Amit Das"
+    "date": "February 25, 2026",
+    "readTime": "10 min read",
+    "author": "Brand Team",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "In the age of social media, your personal brand is your most valuable asset. Whether you're a freelancer, entrepreneur, or job seeker — how people perceive you online directly impacts your opportunities. This guide covers the fundamentals of building an authentic personal brand in the Indian digital landscape."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "What is a Personal Brand?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Your personal brand is the unique combination of skills, experiences, and personality that you present to the world. It's what people say about you when you're not in the room. Think of Indian creators like Tanmay Bhat, Ankur Warikoo, or Pranjal Kamra — each has a distinct positioning that makes them immediately recognizable."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The 3 Pillars of Personal Branding"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Authority: Deep knowledge in your specific domain. You must genuinely know your subject.",
+          "Authenticity: Being real and consistent. Don't pretend to be someone you're not.",
+          "Audience: Understanding who you're speaking to and what problems you're solving for them."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Platform Strategy"
+      },
+      {
+        "type": "paragraph",
+        "text": "Don't try to be everywhere. Choose 1-2 primary platforms: LinkedIn for professional branding and B2B networking, Twitter/X for thought leadership and quick insights, Instagram for visual storytelling and personal connection, YouTube for in-depth content and long-form education. Master one platform before expanding to another."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Content Framework: The 80/20 Rule"
+      },
+      {
+        "type": "paragraph",
+        "text": "80% of your content should provide value (teach, inspire, entertain). 20% can be promotional (your services, products, achievements). People follow brands that give more than they take. Share your knowledge freely — it builds trust and positions you as a go-to expert in your niche."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Common Mistakes to Avoid"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Copying someone else's style instead of finding your own voice",
+          "Being inconsistent — posting daily for a week then disappearing for a month",
+          "Focusing on vanity metrics (followers) instead of genuine engagement",
+          "Not having a clear niche — trying to appeal to everyone appeals to no one",
+          "Ignoring direct messages and comments from your audience"
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "What is the recommended content ratio for personal branding?",
+        "answerOptions": ["100% promotional content", "80% value content, 20% promotional", "50% value, 50% promotional", "Only post when you have something to sell"],
+        "correctAnswer": 1,
+        "explanation": "The 80/20 rule suggests 80% of your content should provide value (educate, inspire, entertain) and only 20% should be promotional. This builds trust and audience loyalty."
+      },
+      {
+        "questionText": "Which platform is best for professional B2B personal branding?",
+        "answerOptions": ["TikTok", "LinkedIn", "Snapchat", "Pinterest"],
+        "correctAnswer": 1,
+        "explanation": "LinkedIn is the premier platform for professional networking and B2B personal branding, particularly strong in the Indian professional ecosystem."
+      },
+      {
+        "questionText": "What is the biggest mistake in personal branding?",
+        "answerOptions": ["Being consistent", "Copying someone else's style and voice", "Providing free value", "Engaging with your audience"],
+        "correctAnswer": 1,
+        "explanation": "Copying others prevents you from developing an authentic voice. The most successful personal brands are built on genuine uniqueness and authenticity."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Graphic Design for Beginners: Start Creating Stunning Visuals",
+    "excerpt": "Learn the fundamentals of graphic design using free tools. No expensive software needed — start designing today with Canva and Figma.",
+    "category": "digital-skills",
+    "date": "February 22, 2026",
+    "readTime": "11 min read",
+    "author": "Design Team",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Graphic design is one of the most versatile and in-demand digital skills. From social media posts to business logos, from YouTube thumbnails to web layouts — design is everywhere. The best part? You don't need expensive software or a design degree to get started."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Essential Design Principles"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Contrast: Use differences in color, size, and weight to create visual hierarchy.",
+          "Alignment: Every element should have a visual connection to something else on the page.",
+          "Repetition: Consistent use of colors, fonts, and styles creates brand cohesion.",
+          "Proximity: Group related items together. White space is your friend.",
+          "Typography: Never use more than 2-3 fonts in a single design."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Free Tools to Get Started"
+      },
+      {
+        "type": "paragraph",
+        "text": "Canva (canva.com) is the best tool for beginners — it offers thousands of templates for social media posts, presentations, logos, and more. For more advanced work, Figma (figma.com) is an industry-standard design tool that's completely free for individual use. GIMP is a free alternative to Photoshop for photo editing."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Color Theory Made Simple"
+      },
+      {
+        "type": "paragraph",
+        "text": "Colors evoke emotions. Blue = trust and professionalism (used by banks, tech companies). Red = urgency and passion (used by food brands, sales). Green = growth and health (used by wellness brands). Use tools like Coolors.co to generate harmonious color palettes. Limit your designs to 3-4 colors maximum."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Freelance Graphic Design in India"
+      },
+      {
+        "type": "paragraph",
+        "text": "Indian graphic designers can earn ₹5,000-₹50,000+ per month freelancing. Popular services include: social media post design (₹200-₹1,000 per post), logo design (₹2,000-₹25,000 per logo), YouTube thumbnail design (₹200-₹500 per thumbnail), and presentation design (₹3,000-₹15,000 per deck). Start building your portfolio on Behance and Dribbble."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Learning Resources"
+      },
+      {
+        "type": "list",
+        "items": [
+          "YouTube: The Futur, Will Paterson, Satori Graphics for design education",
+          "Canva Design School: Free courses directly on Canva's platform",
+          "Google UX Design Certificate: Available on Coursera with financial aid",
+          "Behance.net: Browse professional portfolios for inspiration",
+          "Dribbble.com: Discover trending design styles and techniques"
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "What is the maximum number of fonts recommended in a single design?",
+        "answerOptions": ["1 font only", "2-3 fonts", "5-7 fonts", "As many as possible"],
+        "correctAnswer": 1,
+        "explanation": "Using 2-3 fonts maximum maintains visual consistency and readability. Too many fonts create a chaotic, unprofessional appearance."
+      },
+      {
+        "questionText": "Which free tool is considered industry-standard for UI/UX design?",
+        "answerOptions": ["Microsoft Paint", "Figma", "WordArt", "Adobe Flash"],
+        "correctAnswer": 1,
+        "explanation": "Figma is a free (for individuals) industry-standard design tool used by companies worldwide for UI/UX design, prototyping, and collaborative design systems."
+      },
+      {
+        "questionText": "What emotion does the color blue typically convey in design?",
+        "answerOptions": ["Urgency and danger", "Trust and professionalism", "Fun and playfulness", "Hunger and appetite"],
+        "correctAnswer": 1,
+        "explanation": "Blue typically conveys trust, professionalism, and reliability. This is why it's commonly used by banks, technology companies, and corporate brands."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "UPI & Digital Payments: Understanding India's Fintech Revolution",
+    "excerpt": "How India's Unified Payments Interface (UPI) transformed the nation's financial landscape and what it means for digital entrepreneurs.",
+    "category": "tech",
+    "date": "February 20, 2026",
+    "readTime": "9 min read",
+    "author": "Fintech Desk",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "India's UPI (Unified Payments Interface) has become a global phenomenon. Processing over 10 billion transactions per month, India accounts for 46% of all real-time digital payments globally. Understanding this ecosystem is crucial for any digital entrepreneur or professional in India."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "What is UPI?"
+      },
+      {
+        "type": "paragraph",
+        "text": "UPI is an instant real-time payment system developed by the National Payments Corporation of India (NPCI). It allows users to transfer money between bank accounts instantly using a mobile phone. Unlike NEFT or RTGS, UPI works 24/7, is free of charge, and requires no bank details — just a UPI ID (e.g., name@upi)."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Major UPI Apps in India"
+      },
+      {
+        "type": "list",
+        "items": [
+          "PhonePe: Largest UPI app by market share (~48%). Owned by Walmart's Flipkart.",
+          "Google Pay: Strong user base with Google's integration. Popular in urban areas.",
+          "Paytm: Pioneer in mobile wallets, now integrated with UPI. Also offers a Paytm Payments Bank.",
+          "BHIM: Government's own UPI app. Simple and no-frills interface.",
+          "Amazon Pay: Integrated with Amazon India shopping for seamless checkout."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "UPI for Small Businesses & Freelancers"
+      },
+      {
+        "type": "paragraph",
+        "text": "UPI has been a game-changer for small businesses and freelancers. You can now accept payments instantly from anywhere in India with zero transaction fees. Create a QR code for your business, use UPI links in your invoices, and receive payments directly to your bank account. This eliminates the need for expensive POS machines or payment gateways for domestic transactions."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Security Best Practices"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Never share your UPI PIN with anyone — no bank or app will ever ask for it.",
+          "Always verify the receiver's name before authorizing a payment.",
+          "Be wary of 'collect request' scams — you never need to pay to receive money.",
+          "Enable app lock and biometric authentication on your UPI apps.",
+          "Report unauthorized transactions to your bank within 3 days for a refund.",
+          "Don't scan random QR codes claiming to give you rewards or cashback."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "The Future: UPI Going Global"
+      },
+      {
+        "type": "paragraph",
+        "text": "UPI is now accepted in Singapore, UAE, France, Sri Lanka, and several other countries. India's NPCI is actively working to make UPI a global standard. For Indian freelancers and exporters, this could eventually mean receiving international payments with zero fees. The Digital India initiative continues to evolve the ecosystem with features like UPI Lite, UPI 123PAY (for feature phones), and credit line on UPI."
+      }
+    ],
+    "quiz": [
+      {
+        "questionText": "Which organization developed UPI?",
+        "answerOptions": ["Reserve Bank of India", "NPCI (National Payments Corporation of India)", "SEBI", "Ministry of Finance"],
+        "correctAnswer": 1,
+        "explanation": "UPI was developed by the National Payments Corporation of India (NPCI), which operates under the guidance of the Reserve Bank of India."
+      },
+      {
+        "questionText": "What is a common UPI scam to watch out for?",
+        "answerOptions": ["Receiving money via UPI", "Fake 'collect requests' where you pay to receive money", "Scanning your own QR code", "Using official banking apps"],
+        "correctAnswer": 1,
+        "explanation": "A common scam involves fraudsters sending 'collect requests' claiming you need to pay to receive money. Remember: you never need to pay or enter your PIN to receive a payment."
+      },
+      {
+        "questionText": "Which UPI app has the largest market share in India?",
+        "answerOptions": ["Google Pay", "Paytm", "PhonePe", "BHIM"],
+        "correctAnswer": 2,
+        "explanation": "PhonePe holds the largest market share (~48%) among UPI apps in India, followed by Google Pay and Paytm."
+      }
+    ]
   }
 ]
