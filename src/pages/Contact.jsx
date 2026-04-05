@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Mail, 
@@ -54,10 +54,10 @@ const Contact = () => {
               <span>Get In Touch</span>
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight">
-              Let's <span className="text-primary-blue">Connect</span>
+              Let&apos;s <span className="text-primary-blue">Connect</span>
             </h1>
             <p className="text-xl text-muted max-w-2xl mx-auto">
-              Have questions about our learning paths or want to explore collaboration opportunities? We're here to help.
+              Have questions about our learning paths or want to explore collaboration opportunities? We&apos;re here to help.
             </p>
           </motion.div>
         </div>
@@ -161,7 +161,7 @@ const Contact = () => {
                     </div>
                     <h2 className="text-3xl font-bold mb-4">Message Sent!</h2>
                     <p className="text-muted text-lg max-w-md mx-auto mb-10">
-                      Thank you for reaching out, {formData.name.split(' ')[0]}. We've received your message and will get back to you soon.
+                      Thank you for reaching out, {formData.name.split(' ')[0]}. We&apos;ve received your message and will get back to you soon.
                     </p>
                     <button 
                       className="btn btn-secondary px-10" 
@@ -236,7 +236,7 @@ const Contact = () => {
                       Can I write for EduEarn India?
                       <ArrowRight size={14} className="text-primary-blue opacity-0 group-hover:opacity-100 transition-all" />
                     </h4>
-                    <p className="text-xs text-muted leading-relaxed">We love collaborating with experts. Please select 'Collaboration' in the subject field of the form.</p>
+                    <p className="text-xs text-muted leading-relaxed">We love collaborating with experts. Please select &apos;Collaboration&apos; in the subject field of the form.</p>
                   </div>
                 </div>
               </div>

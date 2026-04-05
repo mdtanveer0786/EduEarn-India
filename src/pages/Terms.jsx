@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Sparkles } from 'lucide-react';
+import { FileText } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const Terms = () => {
@@ -56,7 +55,7 @@ const Terms = () => {
             <p>As a user of this platform, you agree to:</p>
             <ul>
               <li>Use the platform only for lawful purposes consistent with Indian law.</li>
-              <li>Not engage in any activity that disrupts the platform's functionality.</li>
+              <li>Not engage in any activity that disrupts the platform&apos;s functionality.</li>
               <li>Take full responsibility for any financial, investment, or business decisions you make based on our educational content.</li>
               <li>Verify all information independently before acting on it.</li>
             </ul>
@@ -64,10 +63,10 @@ const Terms = () => {
             <h2>4. No Financial or Professional Advice</h2>
             <p>EduEarn India does <strong>not</strong> provide financial advice, investment recommendations, trading signals, or professional consulting. Our content is educational and should not be construed as a substitute for advice from qualified financial, legal, or tax professionals. We explicitly disclaim any responsibility for losses incurred from acting on our content.</p>
 
-            <h2>5. Third-Party Links & Affiliates</h2>
+            <h2>5. Third-Party Links &amp; Affiliates</h2>
             <p>Our website may contain links to third-party websites and affiliate partnerships. While we strive to recommend only quality products and services, we are not responsible for the content, privacy policies, or practices of third-party sites. Affiliate commissions do not influence the editorial integrity of our content.</p>
 
-            <h2>6. Privacy & Data</h2>
+            <h2>6. Privacy &amp; Data</h2>
             <p>Your use of EduEarn India is also governed by our <a href="/privacy">Privacy Policy</a>. We collect minimal data and never sell personal information to third parties. Newsletter subscriptions can be cancelled at any time.</p>
 
             <h2>7. Limitation of Liability</h2>

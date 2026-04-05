@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Heart, 
@@ -9,7 +8,6 @@ import {
   Mountain, 
   Link as LinkIcon, 
   Layout, 
-  ArrowRight,
   Target,
   Users,
   Award,
@@ -18,19 +16,6 @@ import {
 import SEO from '../components/SEO';
 
 const About = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 }
-  };
-
   return (
     <div className="about-page pb-20">
       <SEO 
@@ -131,7 +116,7 @@ const About = () => {
               className="card p-10 bg-surface border-red-500/20 shadow-xl shadow-red-500/5 h-full"
             >
               <h3 className="text-2xl font-bold mb-8 flex items-center gap-3 text-red-600">
-                <XCircle size={28} /> What We DON'T Provide
+                <XCircle size={28} /> What We DON&apos;T Provide
               </h3>
               <ul className="space-y-6">
                 {[

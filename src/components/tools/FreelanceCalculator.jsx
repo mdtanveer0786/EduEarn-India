@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Calculator, IndianRupee, Info, RefreshCcw } from 'lucide-react';
 
 const FreelanceCalculator = () => {

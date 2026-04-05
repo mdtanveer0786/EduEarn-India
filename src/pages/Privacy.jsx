@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Sparkles } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const Privacy = () => {
@@ -26,7 +25,7 @@ const Privacy = () => {
               Privacy <span className="text-primary-blue">Policy</span>
             </h1>
             <p className="text-xl text-muted max-w-2xl mx-auto">
-              Your privacy is important to us. Here's how we handle your data.
+              Your privacy is important to us. Here&apos;s how we handle your data.
             </p>
           </motion.div>
         </div>
@@ -45,7 +44,7 @@ const Privacy = () => {
             <p>We use the information we collect in various ways, including to:</p>
             <ul>
               <li>Provide, operate, and maintain our website.</li>
-              <li>Improve, personalize, and expand our website's educational content.</li>
+              <li>Improve, personalize, and expand our website&apos;s educational content.</li>
               <li>Understand and analyze how you use our website (through anonymous analytics).</li>
               <li>Develop new products, services, features, and functionality.</li>
               <li>Communicate with you, either directly or through one of our partners, for customer service or educational updates.</li>
@@ -54,13 +53,13 @@ const Privacy = () => {
             </ul>
 
             <h2>3. Log Files</h2>
-            <p>EduEarn India follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this as part of hosting services' analytics. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any personally identifiable information.</p>
+            <p>EduEarn India follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this as part of hosting services&apos; analytics. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any personally identifiable information.</p>
 
             <h2>4. Cookies and Web Beacons</h2>
-            <p>Like any other website, EduEarn India uses "cookies". These cookies are used to store information including visitors' preferences (such as your theme preference — light or dark mode), and the pages on the website that the visitor accessed. The information is used to optimize the users' experience by customizing content based on preferences.</p>
+            <p>Like any other website, EduEarn India uses &quot;cookies&quot;. These cookies are used to store information including visitors&apos; preferences (such as your theme preference — light or dark mode), and the pages on the website that the visitor accessed. The information is used to optimize the users&apos; experience by customizing content based on preferences.</p>
 
             <h2>5. Third-Party Privacy Policies</h2>
-            <p>EduEarn India's Privacy Policy does not apply to other advertisers or websites. We are advising you to consult the respective Privacy Policies of third-party services for more detailed information. Third-party services we may use include:</p>
+            <p>EduEarn India&apos;s Privacy Policy does not apply to other advertisers or websites. We are advising you to consult the respective Privacy Policies of third-party services for more detailed information. Third-party services we may use include:</p>
             <ul>
               <li>Google Analytics — for understanding website traffic and user behavior.</li>
               <li>Google AdSense — for displaying minimal, non-intrusive advertisements.</li>
@@ -70,7 +69,7 @@ const Privacy = () => {
             <h2>6. Data Security</h2>
             <p>We take reasonable measures to protect any personal information you provide. However, no method of electronic transmission or storage is 100% secure. While we strive to use commercially acceptable means to protect your data, we cannot guarantee its absolute security.</p>
 
-            <h2>7. Children's Privacy</h2>
+            <h2>7. Children&apos;s Privacy</h2>
             <p>EduEarn India does not knowingly collect personal identifiable information from children under the age of 13. If you believe your child has provided such information, please contact us immediately so we can remove it.</p>
 
             <h2>8. Your Rights</h2>

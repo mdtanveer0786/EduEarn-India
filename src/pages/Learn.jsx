@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -7,7 +6,6 @@ import {
   Code, 
   BarChart, 
   CheckCircle2, 
-  Clock, 
   Layers, 
   ArrowRight,
   Zap,
@@ -139,7 +137,7 @@ const Learn = () => {
                   <div className="bg-surface-alt rounded-2xl p-6 mb-8 border-main">
                     <h4 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4 flex items-center gap-2">
                       <Target size={16} />
-                      What you'll master
+                      What you&apos;ll master
                     </h4>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {path.modules.map((module, index) => (

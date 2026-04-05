@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Calculator, 
   TrendingUp, 
-  Search, 
   Globe, 
   Lightbulb, 
   CheckCircle2, 
@@ -113,7 +112,7 @@ const Tools = () => {
 
       {/* Tools Filter */}
       <div className="sticky top-[72px] z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-y border-gray-100 dark:border-gray-800 py-4 mb-12">
-        <div className="container overflow-x-auto">
+        <div className="container overflow-x-auto no-scrollbar">
           <div className="flex justify-center gap-4 min-w-max pb-1">
             {categories.map(filter => (
               <button 

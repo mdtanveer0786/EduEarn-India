@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldAlert, Sparkles } from 'lucide-react';
+import { ShieldAlert } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const Disclaimer = () => {
@@ -46,8 +45,8 @@ const Disclaimer = () => {
             <h2>2. No Guarantees</h2>
             <p>While we discuss various online earning methods and digital skills, we provide <strong>no guarantees</strong> of income or success. Your results will depend on your own effort, skills, market conditions, and various other factors beyond our control. Any income figures mentioned are for illustrative purposes based on publicly available data and are not promises of earnings.</p>
 
-            <h2>3. Trading & Investment Risk</h2>
-            <p>Trading in financial markets (stocks, crypto, commodities, etc.) involves substantial risk of loss. We do not provide trading tips, signals, or "calls". Any discussion of technical analysis, market concepts, or trading strategies is strictly for educational purposes. <strong>Never trade with money you cannot afford to lose.</strong> Past performance is not indicative of future results.</p>
+            <h2>3. Trading &amp; Investment Risk</h2>
+            <p>Trading in financial markets (stocks, crypto, commodities, etc.) involves substantial risk of loss. We do not provide trading tips, signals, or &quot;calls&quot;. Any discussion of technical analysis, market concepts, or trading strategies is strictly for educational purposes. <strong>Never trade with money you cannot afford to lose.</strong> Past performance is not indicative of future results.</p>
 
             <h2>4. Affiliate Relationships</h2>
             <p>EduEarn India participates in affiliate marketing programs. This means we may earn a commission from products or services purchased through links on our site. This is at no additional cost to you and helps us keep our educational content free. We only recommend products we believe will add value to our readers. Affiliate relationships are always disclosed clearly.</p>

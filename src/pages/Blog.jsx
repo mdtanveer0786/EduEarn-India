@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, SlidersHorizontal, Newspaper, BookOpen, AlertCircle, ArrowRight, Mail, Sparkles } from 'lucide-react';
+import { Search, SlidersHorizontal, Newspaper, AlertCircle, ArrowRight, Mail, Sparkles } from 'lucide-react';
 import PostCard from '../components/PostCard';
 import postsData from '../data/posts.json';
 import SEO from '../components/SEO';
@@ -42,7 +42,8 @@ const Blog = () => {
   }, [activeCategory, searchQuery]);
 
   useEffect(() => {
-    const cat = queryParams.get('category') || 'all';
+    const params = new URLSearchParams(location.search);
+    const cat = params.get('category') || 'all';
     setActiveCategory(cat);
   }, [location.search]);
 
@@ -142,7 +143,7 @@ const Blog = () => {
                   <AlertCircle size={40} />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">No articles found</h3>
-                <p className="text-muted mb-8">Try adjusting your search or category filters to find what you're looking for.</p>
+                <p className="text-muted mb-8">Try adjusting your search or category filters to find what you&apos;re looking for.</p>
                 <button 
                   className="btn btn-primary"
                   onClick={() => {setActiveCategory('all'); setSearchQuery('');}}

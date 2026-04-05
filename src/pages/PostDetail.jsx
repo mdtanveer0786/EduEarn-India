@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -74,9 +74,10 @@ const PostDetail = () => {
       switch (block.type) {
         case 'paragraph':
           return <p key={index} className="leading-relaxed mb-6 text-lg">{block.text}</p>;
-        case 'heading':
+        case 'heading': {
           const HeadingTag = `h${block.level || 2}`;
           return <HeadingTag key={index} className="text-2xl font-bold mb-4 mt-10">{block.text}</HeadingTag>;
+        }
         case 'list':
           return (
             <ul key={index} className="mb-8 space-y-3">
@@ -200,7 +201,7 @@ const PostDetail = () => {
             <>
               <h2 className="text-3xl font-bold mb-6 mt-16">Introduction</h2>
               <p className="leading-relaxed mb-8">
-                In today's rapidly evolving digital economy, mastering <span className="text-primary-blue font-bold">{post.title.toLowerCase()}</span> has become more critical than ever. Whether you're a student, a professional looking for a side hustle, or an aspiring entrepreneur in India, understanding the fundamentals is your first step toward success.
+                In today&apos;s rapidly evolving digital economy, mastering <span className="text-primary-blue font-bold">{post.title.toLowerCase()}</span> has become more critical than ever. Whether you&apos;re a student, a professional looking for a side hustle, or an aspiring entrepreneur in India, understanding the fundamentals is your first step toward success.
               </p>
             </>
           )}
