@@ -15,6 +15,7 @@ const Disclaimer = lazy(() => import('./pages/Disclaimer'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const QuizPage = lazy(() => import('./pages/QuizPage'));
 
 const LoadingSpinner = () => (
   <div className="loading-spinner">
@@ -26,7 +27,7 @@ const LoadingSpinner = () => (
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
             <Route path="/" element={<Layout />}>
@@ -40,6 +41,7 @@ function App() {
               <Route path="disclaimer" element={<Disclaimer />} />
               <Route path="privacy" element={<Privacy />} />
               <Route path="terms" element={<Terms />} />
+              <Route path="quiz" element={<QuizPage />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

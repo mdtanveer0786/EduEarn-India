@@ -17,7 +17,8 @@ import {
   Linkedin,
   MessageCircle,
   ChevronRight,
-  List
+  List,
+  GraduationCap
 } from 'lucide-react';
 import postsData from '../data/posts.json';
 import Quiz from '../components/Quiz';
@@ -73,19 +74,18 @@ const PostDetail = () => {
     return contentBlocks.map((block, index) => {
       switch (block.type) {
         case 'paragraph':
-          return <p key={index} className="leading-relaxed mb-6 text-lg">{block.text}</p>;
+          return <p key={index}>{block.text}</p>;
         case 'heading': {
           const HeadingTag = `h${block.level || 2}`;
-          return <HeadingTag key={index} className="text-2xl font-bold mb-4 mt-10">{block.text}</HeadingTag>;
+          // Create a URL-friendly ID from the heading text
+          const headingId = block.text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+          return <HeadingTag key={index} id={headingId}>{block.text}</HeadingTag>;
         }
         case 'list':
           return (
-            <ul key={index} className="mb-8 space-y-3">
+            <ul key={index}>
               {block.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 p-3 bg-surface-alt rounded-xl border-main">
-                  <CheckCircle2 size={18} className="text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">{item}</span>
-                </li>
+                <li key={i}>{item}</li>
               ))}
             </ul>
           );
@@ -164,137 +164,210 @@ const PostDetail = () => {
       </header>
 
       {/* Content Section */}
-      <div className="container max-w-4xl py-16">
-        {/* Hero Image Placeholder */}
-        <div className="relative rounded-3xl overflow-hidden aspect-video mb-16 bg-gradient-to-br from-blue-100 to-green-100 dark:from-blue-900/20 dark:to-green-900/20 flex items-center justify-center border-main shadow-xl">
-           <BookOpen size={120} className="text-primary-blue opacity-20" />
-           <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl border-main shadow-lg">
-             <p className="text-center text-xs font-bold uppercase tracking-widest text-primary-blue mb-0">Educational Resource Illustration</p>
-           </div>
-        </div>
+      <div className="container max-w-7xl py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-16 relative">
+          {/* Main Content */}
+          <div className="min-w-0">
+            {/* Hero Image Placeholder */}
+            <div className="relative rounded-3xl overflow-hidden aspect-video mb-16 bg-gradient-to-br from-blue-100 to-green-100 dark:from-blue-900/20 dark:to-green-900/20 flex items-center justify-center border-main shadow-xl">
+               <BookOpen size={120} className="text-primary-blue opacity-20" />
+               <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl border-main shadow-lg">
+                 <p className="text-center text-xs font-bold uppercase tracking-widest text-primary-blue mb-0">Educational Resource Illustration</p>
+               </div>
+            </div>
 
-        <div className="post-body">
-          {/* Disclaimer Box */}
-          <div className="bg-blue-50 dark:bg-blue-900/10 border-l-4 border-primary-blue p-8 rounded-r-2xl mb-12 flex gap-6 items-start">
-            <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center text-primary-blue flex-shrink-0 shadow-sm border-main">
-              <Info size={24} />
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-2">Educational Disclaimer</h4>
-              <p className="text-muted text-sm leading-relaxed mb-0">
-                This article is for educational purposes only. We do not provide financial advice, trading signals, or guaranteed income claims. Your success depends on your effort and market conditions. Always perform due diligence.
-              </p>
-            </div>
-          </div>
-
-          {/* Excerpt / Intro Quote */}
-          <p className="text-xl text-muted leading-relaxed italic mb-12 border-l-4 pl-8" style={{borderColor: 'var(--border-color)'}}>
-            {post.excerpt}
-          </p>
-
-          {/* Dynamic Content Rendering */}
-          {post.content && post.content.length > 0 ? (
-            <div className="mb-12">
-              {renderContent(post.content)}
-            </div>
-          ) : (
-            <>
-              <h2 className="text-3xl font-bold mb-6 mt-16">Introduction</h2>
-              <p className="leading-relaxed mb-8">
-                In today&apos;s rapidly evolving digital economy, mastering <span className="text-primary-blue font-bold">{post.title.toLowerCase()}</span> has become more critical than ever. Whether you&apos;re a student, a professional looking for a side hustle, or an aspiring entrepreneur in India, understanding the fundamentals is your first step toward success.
-              </p>
-            </>
-          )}
-
-          {/* Pro Tip */}
-          <div className="bg-green-50 dark:bg-green-900/10 border-l-4 border-green-500 p-8 rounded-r-2xl mb-12 flex gap-6 items-start">
-            <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center text-green-500 flex-shrink-0 shadow-sm border-main">
-              <Lightbulb size={24} />
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-2">Pro Tip for Beginners</h4>
-              <p className="text-muted text-sm leading-relaxed mb-0">
-                Quality over quantity is the secret to digital growth. Dedicate at least 30 minutes daily to deep learning rather than skimming multiple topics. Consistency compounds over time.
-              </p>
-            </div>
-          </div>
-
-          {/* Safety Warning */}
-          <div className="bg-red-50 dark:bg-red-900/10 border-l-4 border-red-500 p-8 rounded-r-2xl mb-12 flex gap-6 items-start">
-            <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center text-red-500 flex-shrink-0 shadow-sm border-main">
-              <AlertTriangle size={24} />
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-2">Crucial Safety Warning</h4>
-              <p className="text-muted text-sm leading-relaxed mb-0">
-                Never share your OTPs, passwords, or personal banking details with anyone claiming to offer online earning opportunities. Legitimate platforms will never ask for such sensitive information.
-              </p>
-            </div>
-          </div>
-
-          {/* Quiz Section */}
-          {post.quiz && post.quiz.length > 0 && (
-            <>
-              <h2 className="text-3xl font-bold mb-8 mt-16 flex items-center gap-3">
-                <List size={28} className="text-primary-blue" />
-                Test Your Knowledge
-              </h2>
-              <div className="mb-16">
-                <Quiz quizData={post.quiz} />
+            <div className="post-body">
+              {/* Disclaimer Box */}
+              <div className="bg-blue-50 dark:bg-blue-900/10 border-l-4 border-primary-blue p-8 rounded-r-2xl mb-12 flex gap-6 items-start">
+                <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center text-primary-blue flex-shrink-0 shadow-sm border-main">
+                  <Info size={24} />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold mb-2">Educational Disclaimer</h4>
+                  <p className="text-muted text-sm leading-relaxed mb-0">
+                    This article is for educational purposes only. We do not provide financial advice, trading signals, or guaranteed income claims. Your success depends on your effort and market conditions. Always perform due diligence.
+                  </p>
+                </div>
               </div>
-            </>
-          )}
 
-          {/* Share Section */}
-          <div className="flex flex-col sm:flex-row items-center justify-between py-12 border-t gap-8">
-             <div className="flex items-center gap-3">
-               <Share2 className="text-primary-blue" size={24} />
-               <span className="font-bold">Share this educational guide</span>
-             </div>
-             <div className="flex gap-4">
-               {[
-                 { icon: <Facebook size={20} />, color: 'hover:bg-blue-600', label: 'Facebook', url: shareLinks.facebook },
-                 { icon: <Twitter size={20} />, color: 'hover:bg-sky-500', label: 'Twitter', url: shareLinks.twitter },
-                 { icon: <Linkedin size={20} />, color: 'hover:bg-blue-700', label: 'LinkedIn', url: shareLinks.linkedin },
-                 { icon: <MessageCircle size={20} />, color: 'hover:bg-green-500', label: 'WhatsApp', url: shareLinks.whatsapp }
-               ].map((social, i) => (
-                 <a 
-                  key={i} 
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-12 h-12 rounded-xl bg-surface-alt border-main flex items-center justify-center text-muted hover:text-white transition-all shadow-sm ${social.color}`}
-                  aria-label={`Share on ${social.label}`}
-                 >
-                   {social.icon}
-                 </a>
-               ))}
-             </div>
+              {/* Excerpt / Intro Quote */}
+              <p className="text-xl text-muted leading-relaxed italic mb-12 border-l-4 pl-8" style={{borderColor: 'var(--border-color)'}}>
+                {post.excerpt}
+              </p>
+
+              {/* Dynamic Content Rendering */}
+              {post.content && post.content.length > 0 ? (
+                <div className="mb-12">
+                  {renderContent(post.content)}
+                </div>
+              ) : (
+                <div className="mb-12">
+                  <h2 className="text-3xl font-bold mb-6 mt-16">Introduction</h2>
+                  <p className="leading-relaxed mb-8">
+                    In today&apos;s rapidly evolving digital economy, mastering <span className="text-primary-blue font-bold">{post.title.toLowerCase()}</span> has become more critical than ever. Whether you&apos;re a student, a professional looking for a side hustle, or an aspiring entrepreneur in India, understanding the fundamentals is your first step toward success.
+                  </p>
+                </div>
+              )}
+
+              {/* Pro Tip */}
+              <div className="bg-green-50 dark:bg-green-900/10 border-l-4 border-green-500 p-8 rounded-r-2xl mb-12 flex gap-6 items-start">
+                <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center text-green-500 flex-shrink-0 shadow-sm border-main">
+                  <Lightbulb size={24} />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold mb-2">Pro Tip for Beginners</h4>
+                  <p className="text-muted text-sm leading-relaxed mb-0">
+                    Quality over quantity is the secret to digital growth. Dedicate at least 30 minutes daily to deep learning rather than skimming multiple topics. Consistency compounds over time.
+                  </p>
+                </div>
+              </div>
+
+              {/* Safety Warning */}
+              <div className="bg-red-50 dark:bg-red-900/10 border-l-4 border-red-500 p-8 rounded-r-2xl mb-12 flex gap-6 items-start">
+                <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center text-red-500 flex-shrink-0 shadow-sm border-main">
+                  <AlertTriangle size={24} />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold mb-2">Crucial Safety Warning</h4>
+                  <p className="text-muted text-sm leading-relaxed mb-0">
+                    Never share your OTPs, passwords, or personal banking details with anyone claiming to offer online earning opportunities. Legitimate platforms will never ask for such sensitive information.
+                  </p>
+                </div>
+              </div>
+
+              {/* Quiz Section */}
+              {post.quiz && post.quiz.length > 0 && (
+                <div id="knowledge-test" className="scroll-mt-32">
+                  <h2 className="text-3xl font-bold mb-8 mt-16 flex items-center gap-3">
+                    <List size={28} className="text-primary-blue" />
+                    Test Your Knowledge
+                  </h2>
+                  <div className="mb-16">
+                    <Quiz quizData={post.quiz} />
+                  </div>
+                </div>
+              )}
+
+              {/* Share Section */}
+              <div className="flex flex-col sm:flex-row items-center justify-between py-12 border-t gap-8">
+                <div className="flex items-center gap-3">
+                  <Share2 className="text-primary-blue" size={24} />
+                  <span className="font-bold">Share this educational guide</span>
+                </div>
+                <div className="flex gap-4">
+                  {[
+                    { icon: <Facebook size={20} />, color: 'hover:bg-blue-600', label: 'Facebook', url: shareLinks.facebook },
+                    { icon: <Twitter size={20} />, color: 'hover:bg-sky-500', label: 'Twitter', url: shareLinks.twitter },
+                    { icon: <Linkedin size={20} />, color: 'hover:bg-blue-700', label: 'LinkedIn', url: shareLinks.linkedin },
+                    { icon: <MessageCircle size={20} />, color: 'hover:bg-green-500', label: 'WhatsApp', url: shareLinks.whatsapp }
+                  ].map((social, i) => (
+                    <a 
+                      key={i} 
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-12 h-12 rounded-xl bg-surface-alt border-main flex items-center justify-center text-muted hover:text-white transition-all shadow-sm ${social.color}`}
+                      aria-label={`Share on ${social.label}`}
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Related Posts */}
+              {relatedPosts.length > 0 && (
+                <div className="mt-20">
+                  <h3 className="text-2xl font-bold mb-8">Continue Your Journey</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {relatedPosts.map(related => (
+                      <Link 
+                        key={related.id} 
+                        to={`/post/${related.id}`} 
+                        className="card p-6 bg-surface-alt border-main hover:border-primary-blue transition-all group no-underline"
+                      >
+                        <h4 className="font-bold mb-3 group-hover:text-primary-blue transition-colors line-clamp-2">
+                          {related.title}
+                        </h4>
+                        <p className="text-muted text-sm mb-4 line-clamp-2">{related.excerpt}</p>
+                        <div className="flex items-center gap-1 text-xs font-bold text-primary-blue uppercase tracking-widest mt-auto">
+                          Read More <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
-          {/* Related Posts */}
-          {relatedPosts.length > 0 && (
-            <div className="mt-20">
-              <h3 className="text-2xl font-bold mb-8">Continue Your Journey</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {relatedPosts.map(related => (
-                  <Link 
-                    key={related.id} 
-                    to={`/post/${related.id}`} 
-                    className="card p-6 bg-surface-alt border-main hover:border-primary-blue transition-all group no-underline"
+          {/* Sidebar */}
+          <aside className="lg:sticky lg:top-32 h-fit">
+            <div className="card p-8 border-main bg-surface-alt shadow-sm">
+              <h4 className="font-bold mb-6 flex items-center gap-2">
+                <List size={18} className="text-primary-blue" />
+                Table of Contents
+              </h4>
+              <nav className="space-y-4">
+                {post.content && post.content.filter(b => b.type === 'heading').map((heading, i) => {
+                  const headingId = heading.text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+                  return (
+                    <a 
+                      key={i} 
+                      href={`#${headingId}`}
+                      className="block text-sm text-muted hover:text-primary-blue transition-colors font-medium hover:translate-x-1 transition-transform no-underline"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById(headingId)?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                    >
+                      {heading.text}
+                    </a>
+                  );
+                })}
+                
+                {post.quiz && post.quiz.length > 0 && (
+                  <a 
+                    href="#knowledge-test"
+                    className="block text-sm text-primary-blue font-bold border-t pt-4 mt-4 hover:translate-x-1 transition-transform no-underline"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById('knowledge-test')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                   >
-                    <h4 className="font-bold mb-3 group-hover:text-primary-blue transition-colors line-clamp-2">
-                      {related.title}
-                    </h4>
-                    <p className="text-muted text-sm mb-4 line-clamp-2">{related.excerpt}</p>
-                    <div className="flex items-center gap-1 text-xs font-bold text-primary-blue uppercase tracking-widest mt-auto">
-                      Read More <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                    </div>
+                    Knowledge Test
+                  </a>
+                )}
+              </nav>
+
+              <div className="mt-10 pt-10 border-t">
+                <div className="p-6 bg-primary-blue/5 rounded-2xl border border-primary-blue/10">
+                  <h5 className="font-bold mb-3 text-primary-blue flex items-center gap-2 text-sm">
+                    <GraduationCap size={16} /> Learning Resources
+                  </h5>
+                  <p className="text-xs text-muted leading-relaxed mb-4">
+                    Access our curated paths to master digital skills faster in India.
+                  </p>
+                  <Link to="/learn" className="text-xs font-bold text-primary-blue hover:underline">
+                    View Paths &rarr;
                   </Link>
-                ))}
+                </div>
               </div>
             </div>
-          )}
+
+            <div className="card p-8 border-main bg-primary-blue/5 mt-8 border-dashed">
+              <h4 className="font-bold mb-4 flex items-center gap-2">
+                <BookOpen size={18} className="text-primary-blue" />
+                Full Mission
+              </h4>
+              <p className="text-xs text-muted leading-relaxed mb-6">
+                EduEarn India is dedicated to providing honest digital education for all.
+              </p>
+              <Link to="/about" className="btn btn-primary btn-block text-sm">
+                About Us
+              </Link>
+            </div>
+          </aside>
         </div>
       </div>
     </article>

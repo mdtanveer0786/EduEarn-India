@@ -18,6 +18,11 @@ import {
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import FreelanceCalculator from '../components/tools/FreelanceCalculator';
+import CompoundInterestVisualizer from '../components/tools/CompoundInterestVisualizer';
+import SEOChecklist from '../components/tools/SEOChecklist';
+import RiskRewardTool from '../components/tools/RiskRewardTool';
+import DomainGenerator from '../components/tools/DomainGenerator';
+import ContentIdeaMatrix from '../components/tools/ContentIdeaMatrix';
 
 const Tools = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -39,7 +44,8 @@ const Tools = () => {
       description: 'See the power of compounding for your long-term educational investments and savings.',
       category: 'finance',
       icon: <TrendingUp className="text-green-500" />,
-      tags: ['Investing', 'Education']
+      tags: ['Investing', 'Education'],
+      component: <CompoundInterestVisualizer />
     },
     {
       id: 3,
@@ -47,7 +53,8 @@ const Tools = () => {
       description: 'A comprehensive checklist to ensure your content is optimized for search engines.',
       category: 'marketing',
       icon: <CheckCircle2 className="text-purple-500" />,
-      tags: ['SEO', 'Marketing']
+      tags: ['SEO', 'Marketing'],
+      component: <SEOChecklist />
     },
     {
       id: 4,
@@ -55,7 +62,8 @@ const Tools = () => {
       description: 'Learn how to calculate risk-reward ratios for educational market analysis.',
       category: 'finance',
       icon: <Target className="text-red-500" />,
-      tags: ['Trading', 'Math']
+      tags: ['Trading', 'Math'],
+      component: <RiskRewardTool />
     },
     {
       id: 5,
@@ -63,7 +71,8 @@ const Tools = () => {
       description: 'Find creative domain names for your upcoming digital project or blog.',
       category: 'tech',
       icon: <Globe className="text-orange-500" />,
-      tags: ['Web', 'Creative']
+      tags: ['Web', 'Creative'],
+      component: <DomainGenerator />
     },
     {
       id: 6,
@@ -71,7 +80,8 @@ const Tools = () => {
       description: 'Generate endless content ideas for your blog or social media channels.',
       category: 'marketing',
       icon: <Lightbulb className="text-yellow-500" />,
-      tags: ['Writing', 'Strategy']
+      tags: ['Writing', 'Strategy'],
+      component: <ContentIdeaMatrix />
     }
   ];
 

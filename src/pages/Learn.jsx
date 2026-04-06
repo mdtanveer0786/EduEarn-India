@@ -19,6 +19,7 @@ const Learn = () => {
   const learningPaths = [
     {
       id: 'online-earning-mastery',
+      categoryId: 'online-earning',
       title: 'Online Earning Mastery',
       level: 'Beginner to Intermediate',
       icon: <Zap className="text-blue-500" />,
@@ -30,6 +31,7 @@ const Learn = () => {
     },
     {
       id: 'trading-fundamentals',
+      categoryId: 'trading-basics',
       title: 'Trading Fundamentals',
       level: 'Beginner',
       icon: <TrendingUp className="text-green-500" />,
@@ -41,6 +43,7 @@ const Learn = () => {
     },
     {
       id: 'digital-marketing-skills',
+      categoryId: 'digital-skills',
       title: 'Digital Marketing Skills',
       level: 'Beginner to Pro',
       icon: <BarChart className="text-purple-500" />,
@@ -52,6 +55,7 @@ const Learn = () => {
     },
     {
       id: 'web-development-start',
+      categoryId: 'tech',
       title: 'Web Development Start',
       level: 'Beginner',
       icon: <Code className="text-orange-500" />,
@@ -161,7 +165,7 @@ const Learn = () => {
                       </div>
                     </div>
                     <Link 
-                      to={`/blog?category=${path.id.split('-').slice(0, 2).join('-')}`} 
+                      to={`/blog?category=${path.categoryId}`} 
                       className="btn btn-primary"
                     >
                       Start Path <ArrowRight size={18} />

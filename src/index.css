@@ -669,6 +669,7 @@ ul { list-style: none; }
 
 .logo-text { color: var(--text-heading); }
 .logo-highlight { color: var(--primary-blue); }
+[data-theme='dark'] .logo-highlight { color: #60a5fa; }
 
 .nav-menu {
     display: flex;
@@ -1100,8 +1101,64 @@ ul { list-style: none; }
 }
 
 /* ============================================
+   ARTICLE CONTENT (PostDetail)
+   ============================================ */
+.post-body {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-main);
+}
+
+.post-body h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-heading);
+    letter-spacing: -0.02em;
+}
+
+.post-body h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-heading);
+}
+
+.post-body p {
+    margin-bottom: 2rem;
+}
+
+.post-body ul {
+    margin-bottom: 2.5rem;
+    padding-left: 1rem;
+}
+
+.post-body li {
+    margin-bottom: 1rem;
+}
+
+.post-body blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--text-muted);
+    border-left: 4px solid var(--primary-blue);
+    padding: 1.5rem 0 1.5rem 2.5rem;
+    margin: 3rem 0;
+    background: var(--bg-surface-alt);
+    border-radius: 0 1.5rem 1.5rem 0;
+}
+
+.post-body strong {
+    color: var(--text-heading);
+    font-weight: 700;
+}
+
+/* ============================================
    LEGAL PAGES (Disclaimer, Privacy, Terms)
    ============================================ */
+
 .page-header {
     padding: 8rem 0 3rem;
     background: linear-gradient(to bottom, rgba(37, 99, 235, 0.05), transparent);
@@ -1128,33 +1185,56 @@ ul { list-style: none; }
 }
 
 .policy-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-top: 3.5rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-heading);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    letter-spacing: -0.01em;
+}
+
+.policy-content h3 {
+    font-size: 1.25rem;
     font-weight: 700;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     color: var(--text-heading);
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--border-color);
 }
 
 .policy-content p {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     line-height: 1.8;
     color: var(--text-main);
-    margin-bottom: 1rem;
-}
-
-.policy-content ul {
-    list-style: disc;
-    padding-left: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
+.policy-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
 .policy-content ul li {
-    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.75rem;
     color: var(--text-main);
     line-height: 1.7;
 }
+
+.policy-content ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+}
+
 
 .disclaimer-box {
     background: rgba(239, 68, 68, 0.05);
@@ -1345,8 +1425,14 @@ ul { list-style: none; }
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     box-shadow: -20px 0 60px rgba(0, 0, 0, 0.15);
     border-left: 1px solid var(--border-color);
+}
+
+.mobile-menu-drawer::-webkit-scrollbar {
+    display: none;
 }
 
 .mobile-menu-header {
@@ -1401,7 +1487,7 @@ ul { list-style: none; }
 
 .mobile-nav-links {
     flex: 1;
-    padding: 0.75rem 1rem;
+    padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -1725,6 +1811,20 @@ ul { list-style: none; }
     /* CTA section */
     .p-12 { padding: 2rem; }
     .lg\:p-16 { padding: 2rem; }
+}
+
+/* Extra Small Mobile (<=375px) */
+@media (max-width: 375px) {
+    .container { padding: 0 0.75rem; }
+    h1, .hero h1 { font-size: 1.5rem; }
+    .hero-actions { flex-direction: column; gap: 0.75rem; width: 100%; }
+    .hero-actions .btn { width: 100%; padding: 0.75rem 1rem; font-size: 0.95rem; }
+    .btn-large { padding: 0.75rem 1rem; }
+    .mobile-menu-header, .mobile-menu-badge, .mobile-menu-cta, .mobile-menu-footer { padding-left: 1rem; padding-right: 1rem; }
+    .mobile-nav-links { padding: 0.5rem 1rem; }
+    .nav-brand .logo { font-size: 1.125rem; }
+    .stat-number { font-size: 1.25rem; }
+    .stat-item { min-width: 60px; }
 }
 
 /* ============================================

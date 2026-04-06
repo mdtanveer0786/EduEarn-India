@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { 
   Sun, Moon, Menu, X, ArrowRight, BookOpen, Zap, 
-  Home, FileText, GraduationCap, LayoutGrid, Info, Mail 
+  Home, FileText, GraduationCap, LayoutGrid, Info, Mail, Award 
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -28,28 +28,11 @@ const Navbar = () => {
   // Body scroll lock when menu is open
   useEffect(() => {
     if (isOpen) {
-      const scrollY = window.scrollY;
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.left = '0';
-      document.body.style.right = '0';
       document.body.style.overflow = 'hidden';
     } else {
-      const scrollY = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.left = '';
-      document.body.style.right = '';
       document.body.style.overflow = '';
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
-      }
     }
     return () => {
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.left = '';
-      document.body.style.right = '';
       document.body.style.overflow = '';
     };
   }, [isOpen]);
@@ -86,6 +69,7 @@ const Navbar = () => {
     { name: 'Blog', path: '/blog', icon: FileText },
     { name: 'Learn', path: '/learn', icon: GraduationCap },
     { name: 'Tools', path: '/tools', icon: LayoutGrid },
+    { name: 'Quiz', path: '/quiz', icon: Award },
     { name: 'About', path: '/about', icon: Info },
     { name: 'Contact', path: '/contact', icon: Mail },
   ];
@@ -93,32 +77,13 @@ const Navbar = () => {
   const menuVariants = {
     closed: { 
       x: '100%',
-      transition: { 
-        type: 'spring', 
-        stiffness: 400, 
-        damping: 40,
-        staggerChildren: 0.05,
-        staggerDirection: -1
-      } 
+      transitionEnd: { display: 'none' },
+      transition: { duration: 0.2, ease: "easeOut" } 
     },
     open: { 
+      display: 'flex',
       x: 0,
-      transition: { 
-        type: 'spring', 
-        stiffness: 400, 
-        damping: 40,
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      } 
-    }
-  };
-
-  const linkVariants = {
-    closed: { opacity: 0, x: 20 },
-    open: { 
-      opacity: 1, 
-      x: 0,
-      transition: { duration: 0.3 }
+      transition: { type: 'spring', stiffness: 300, damping: 30 } 
     }
   };
 
@@ -190,108 +155,96 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay + Drawer */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            key="backdrop"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="mobile-menu-backdrop"
-            onClick={closeMenu}
-            aria-hidden="true"
-          />
-        )}
+      {/* Mobile Menu Backdrop */}
+      <motion.div
+        className="mobile-menu-backdrop"
+        initial={{ opacity: 0, pointerEvents: 'none' }}
+        animate={{ 
+          opacity: isOpen ? 1 : 0, 
+          pointerEvents: isOpen ? 'auto' : 'none' 
+        }}
+        transition={{ duration: 0.2 }}
+        onClick={closeMenu}
+        inert={!isOpen ? "true" : undefined}
+      />
         
-        {isOpen && (
-          <motion.div
-            key="drawer"
-            className="mobile-menu-drawer"
-            variants={menuVariants}
-            initial="closed"
-            animate="open"
-            exit="closed"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Navigation menu"
-          >
-            {/* Drawer Header */}
-            <div className="mobile-menu-header">
-              <Link to="/" onClick={closeMenu} className="no-underline">
-                <div className="logo">
-                  <span className="logo-icon">EE</span>
-                  <span className="logo-text">EduEarn<span className="logo-highlight">India</span></span>
-                </div>
+      {/* Mobile Menu Drawer */}
+      <motion.div
+        className="mobile-menu-drawer"
+        variants={menuVariants}
+        initial="closed"
+        animate={isOpen ? "open" : "closed"}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigation menu"
+        inert={!isOpen ? "true" : undefined}
+      >
+        {/* Drawer Header */}
+        <div className="mobile-menu-header">
+          <Link to="/" onClick={closeMenu} className="no-underline">
+            <div className="logo">
+              <span className="logo-icon">EE</span>
+              <span className="logo-text">EduEarn<span className="logo-highlight">India</span></span>
+            </div>
+          </Link>
+          <button onClick={closeMenu} className="mobile-close-btn" aria-label="Close menu">
+            <X size={24} />
+          </button>
+        </div>
+
+        {/* Drawer Badge */}
+        <div className="mobile-menu-badge">
+          <Zap size={14} />
+          <span>Free Educational Platform</span>
+        </div>
+
+        {/* Navigation Links */}
+        <nav className="mobile-nav-links">
+          {navLinks.map((link) => {
+            const Icon = link.icon;
+            return (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`mobile-nav-link ${isActive(link.path) ? 'active' : ''}`}
+                onClick={closeMenu}
+              >
+                <span className="mobile-nav-emoji">
+                  <Icon size={20} />
+                </span>
+                <span className="mobile-nav-text">{link.name}</span>
+                {isActive(link.path) && (
+                  <span className="mobile-nav-active-dot" />
+                )}
               </Link>
-              <button onClick={closeMenu} className="mobile-close-btn" aria-label="Close menu">
-                <X size={24} />
-              </button>
-            </div>
+            );
+          })}
+        </nav>
 
-            {/* Drawer Badge */}
-            <div className="mobile-menu-badge">
-              <Zap size={14} />
-              <span>Free Educational Platform</span>
-            </div>
+        {/* Drawer CTA */}
+        <div className="mobile-menu-cta">
+          <Link to="/learn" className="btn btn-primary btn-block btn-large" onClick={closeMenu}>
+            <BookOpen size={20} /> Start Learning Free
+          </Link>
+          <p className="mobile-cta-note">
+            100% free • No credit card required
+          </p>
+        </div>
 
-            {/* Navigation Links */}
-            <nav className="mobile-nav-links">
-              {navLinks.map((link) => {
-                const Icon = link.icon;
-                return (
-                  <motion.div
-                    key={link.name}
-                    variants={linkVariants}
-                  >
-                    <Link
-                      to={link.path}
-                      className={`mobile-nav-link ${isActive(link.path) ? 'active' : ''}`}
-                      onClick={closeMenu}
-                    >
-                      <span className="mobile-nav-emoji">
-                        <Icon size={20} />
-                      </span>
-                      <span className="mobile-nav-text">{link.name}</span>
-                      {isActive(link.path) && (
-                        <span className="mobile-nav-active-dot" />
-                      )}
-                    </Link>
-                  </motion.div>
-                );
-              })}
-            </nav>
-
-            {/* Drawer CTA */}
-            <motion.div
-              className="mobile-menu-cta"
-              variants={linkVariants}
+        {/* Drawer Footer */}
+        <div className="mobile-menu-footer">
+          <div className="mobile-theme-switcher">
+            <span className="text-sm font-medium">{theme === 'light' ? '☀️ Light' : '🌙 Dark'} Mode</span>
+            <button 
+              onClick={toggleTheme} 
+              className="theme-toggle" 
+              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             >
-              <Link to="/learn" className="btn btn-primary btn-block btn-large" onClick={closeMenu}>
-                <BookOpen size={20} /> Start Learning Free
-              </Link>
-              <p className="mobile-cta-note">
-                100% free • No credit card required
-              </p>
-            </motion.div>
-
-            {/* Drawer Footer */}
-            <div className="mobile-menu-footer">
-              <div className="mobile-theme-switcher">
-                <span className="text-sm font-medium">{theme === 'light' ? '☀️ Light' : '🌙 Dark'} Mode</span>
-                <button 
-                  onClick={toggleTheme} 
-                  className="theme-toggle" 
-                  aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-                >
-                  {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+            </button>
+          </div>
+        </div>
+      </motion.div>
     </>
   );
 };

@@ -102,11 +102,11 @@ const Home = () => {
             <p className="hero-description">
               Master legal online earning methods, understand market fundamentals, and build high-demand digital skills with our comprehensive, beginner-friendly guides.
             </p>
-            <div className="hero-actions">
-              <Link to="/learn" className="btn btn-primary btn-large">
+            <div className="hero-actions flex flex-col sm:flex-row gap-4 mt-8 w-full">
+              <Link to="/learn" className="btn btn-primary btn-large w-full sm:w-auto">
                 Start Learning Free <ArrowRight size={20} />
               </Link>
-              <Link to="/tools" className="btn btn-secondary btn-large">
+              <Link to="/tools" className="btn btn-secondary btn-large w-full sm:w-auto">
                 Try Free Tools
               </Link>
             </div>
